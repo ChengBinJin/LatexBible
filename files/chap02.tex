@@ -88,6 +88,53 @@ Johnson et al. \ ABC
 {\myfont \char66}{\myfont \char67}{\myfont \char68}%
 {\myfont \char71}{\myfont \char72}{\myfont \char73}%
 {\myfont \char74}{\myfont \char68}
+
+오늘은 \today 이다.
+
+\TeX $\rightarrow$ \LaTeX $\rightarrow$ \LaTeXe
+
+여기에 \underline{밑줄} 쫙. \underline{밑줄이 길면 한줄을 넘어가며 줄 바꾸기가 안됩니다.}
+
+이 부분 \emph{중요} 합니다.
+
+This is \emph{emphasized} text.
+
+\emph{did} not, \emph{did\/} not
+
+\dotemph{드러냄표}로 강조하기
+
+\LaTeX 에서는 \% 이후 % 여기서
+입력은 무시한다. % 아무거나 $ &
+
+\`{o} \'{o} \^{o} 
+
+\"{o} \~{o} \={o}
+
+\.{o} \u{o} \v{o}
+
+\H{o} \t{oo} \c{o}
+
+\b{o} \d{o} \r{o}
+
+\oe \  \OE \  \ae \  \AE
+
+\aa \AA \o \O
+
+\l \L \ss ?`
+
+!`
+
+$\mbox{\L}(x) = \mbox{\AE} + \mbox{\^\i}$ \footnote{\LaTeX에서 [ 와 ] 사이에 들어가는 내용은 옵션이므로 항상 생략할 수 있다.}
+
+각 주의 번호가 증가하므로 \\
+\verb+\setcounter+\footnotemark 나 \\
+\verb+\addtocounter+\addtocounter{footnote}{-1}\footnote{\ref{ss:cntnum}절 참조}
+명령을 이용하여... \footnote{이 경우 \texttt{\$}는 \emph{robust}이기 때문에 굳이 \texttt{\symbol{92}protect}를 사용할 필요가 없다.}
+
+\section{ \( a+b \) }
+
+\section{ \protect\( a+b \protect\)}
+
 \end{document}
 
 
