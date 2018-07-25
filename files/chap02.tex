@@ -2,6 +2,8 @@
 
 \usepackage{kotex}
 
+\hyphenation{Ghost-Script}
+
 \begin{document}
 This space that space                  This space that    space
 \LaTeX \       은 문장 안에서 하나   이상의 공간은
@@ -51,12 +53,41 @@ Here go \\ an empty lines
 
 Hello world!
 
+\parskip=0.5cm
 
+`작은따옴표'와 ``큰따옴표"는 만들기 쉽다.
 
+``\,`큰' 따옴표는 `크다'.\,"
 
+-, --, ---
 
+텍스트로 그림을 저장한
+Po\-st\-Script 파일을 화면으로
+볼 수 있게 하는 프로그램으로
+Gho\-st\-Script가 있다.
 
+텍스트로 그림을 저장한 PostScript 파일을 화면으로 볼 수 있게 하는 프로그램으로  Ghostscript가 있다.
 
+We have I + I = II. Right?
+
+We have I + I = II\@. Right?
+
+Johnson et al. ABC
+
+Johnson et al. \ ABC
+
+\# \$ \% \_ \{ \} \~ \^
+
+\font \myfont=manfnt scaled 1095
+{\myfont \symbol{40} \symbol{41} \symbol{42} \symbol{43}%
+ \symbol{44} \symbol{45} \symbol{46} \symbol{42}} \space \space
+ 
+{\myfont \symbol{47} \symbol{48} \symbol{49} \symbol{50}%
+\symbol{51} \symbol{52} \symbol{53} \symbol{49}}
+
+{\myfont \char66}{\myfont \char67}{\myfont \char68}%
+{\myfont \char71}{\myfont \char72}{\myfont \char73}%
+{\myfont \char74}{\myfont \char68}
 \end{document}
 
 
