@@ -1,5 +1,8 @@
 \documentclass[11pt]{article}
 
+\usepackage{kotex}
+\usepackage{fix-cm}
+
 \title{Chapter 3}
 \author{Cheng-Bin Jin \and Jing Jin \thanks{Supported by a grant.}}
 \date{\today}
@@ -56,5 +59,25 @@ Hello \LaTeX \ chapter 03!
 {\Large \bf ABC}
 
 {\bf \Large ABC}
+
+{\fontsize{2.5pt}{5pt} \selectfont This is smaller than tiny!, 한글은? 잘 되네요.} \\
+{\tiny This is equal to tiny!, 한글은? 잘 되네요.}
+
+{\fontsize{3.3cm}{3.8cm} \selectfont HUUGE \\ 더 크게}
+
+\lowercase{AbCdE}
+
+\uppercase{AbCdE}
+
+\verb|special characters @ $ %|
+
+\verb|가|
+
+\begin{verbatim}
+To make an output "as
+is", including special 
+characters, # % &, use 
+verbatim environment.
+\end{verbatim}
 
 \end{document}
