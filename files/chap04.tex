@@ -47,6 +47,54 @@ Hello world!
 
 \null \hfill \today \\
 
+\makebox[2cm]{2cm}의 박스
 
+\makebox[2cm][l]{2cm}의 박스
+
+\makebox[2cm][r]{2cm}의 박스
+
+여기에 \mbox{3cm} 의 박스
+
+여기에 \framebox[1in]{사각형}이 있다.
+
+여기에 \framebox[1in][l]{사각형}이 있다.
+
+O O O \framebox[1cm]{This is a box} O O O
+
+O O O \makebox[1cm]{This is a box} O O O
+
+\fbox{김철수}
+
+\fbox{\fbox{김철수}}
+
+\fbox{go}, \fbox{enter}, \fbox{joy}
+
+\fbox{\strut go}, \fbox{\strut enter}, \fbox{\strut joy}
+
+\parbox{2in}{A box of 2 cm length is here
+and a second box will be next} \ \hfill BETWEEN \ \hfill
+\parbox{3cm}{This box has 3cm length} \\ 
+
+여기에 \hfill \fbox{\parbox{3in}{여기에 박스를 넣으면
+박스 앞뒤로 다른 문장이 이어져 나온다. 그 이유는 줄을
+바꾸지 않았기 때문이다.}} \hfill 박스가 있다. \\
+
+\begin{minipage}[t]{2in}
+\texttt{minipage}는 \texttt{parbox}와 비슷하다.
+반드시 폭을 주어야 한다.
+\end{minipage} 
+\textbf{그러나} \ 
+\begin{minipage}[b]{2in}
+위치는 줄 수도 있고 주지 않을 수도 있다. 지정해 주지 않으면 \texttt{c}\footnote{중앙(center)을 의미}를 가정한다.
+\end{minipage}
+
+\marginpar{\footnotesize 오른쪽에 만들어진 가장자리 문단}
+
+\addtolength{\marginparwidth}{-1cm}
+\reversemarginpar
+\marginpar{왼쪽에 만들어진 가장자리 문단}
+
+\normalmarginpar
+\addtolength{\marginparwidth}{1cm}
 
 \end{document}
