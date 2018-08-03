@@ -11,6 +11,14 @@
 \renewcommand{\baselinestretch}{1.6}
 \addtolength{\baselineskip}{2pt}
 
+\newcommand{\hangl}{\lower-0.2em\hbox{{ㅎ\kern-.53em\lower%
+.33em\hbox{$\cdot$}\kern -.7em\lower 1ex\hbox{ㄴ}}%
+\lower0.2em\hbox{글}}}
+
+\def\TeX{T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX}
+
+\def\AmS{{\protect\usefont{OMS}{cmsy}{m}{n}A\kern-.1667em\lower.5ex\hbox{M}\kern-.125emS}}
+
 \begin{document}
 Hello world!
 
@@ -96,5 +104,17 @@ and a second box will be next} \ \hfill BETWEEN \ \hfill
 
 \normalmarginpar
 \addtolength{\marginparwidth}{1cm}
+
+\rule{3mm}{3mm} \rule[2mm]{3mm}{3mm}
+
+\fbox{\rule{1cm}{0cm} \rule{0cm}{1cm}}
+
+테스트 \hangl
+
+\LaTeX은 문장의 일부를 \raisebox{.6ex}{올리거나} 또는 \raisebox{-.6ex}{내릴} 수 있다.
+
+테스트 \TeX
+
+테스트 \AmS
 
 \end{document}
