@@ -3,6 +3,9 @@
 \usepackage{kotex}
 \usepackage{latexsym}
 \usepackage{amssymb}
+\usepackage{bm}
+
+\newcommand{\sumnbr}{\sum_{\mbox{nbr}}}
 
 \begin{document}
 Hello Wolrd!
@@ -108,6 +111,85 @@ a_{31}& a_{32}& a_{33}
 \]
 
 $$\widehat{a-1} = \widetilde{x-y} + \widehat{\mbox{Cov}}$$
+
+\[
+\begin{array}{lrc}
+a & b & c \\
+a-b & b-c & c-a \\
+x^2+2x+1 & x^2+2x+1 & x^2+2x+1
+\end{array}
+\]
+
+\begin{equation}
+\begin{array}{*{3}{c@{+}}c@{=}c}
+a_{11}x_1 & a_{12}x_2 & \cdots & a_{1n}x_n & b_1 \\
+a_{11}x_1 & a_{12}x_2 & \cdots & a_{1n}x_n & b_1 \\
+\multicolumn{5}{c}{\vdots} \\
+a_{11}x_1 & a_{12}x_2 & \cdots & a_{1n}x_n & b_1
+\end{array}
+\end{equation}
+
+$\left( \begin{array}{c} 
+\left| \begin{array}{cc} 
+a & b \\
+c & d
+\end{array} \right| \\
+e \\
+f 
+\end{array} \right) $
+
+$$x^n = \overbrace{x\times x \times \cdots \times x}$$
+
+$$\overbrace{a+\underbrace{b+\overline{c+d}}+e}$$
+
+$$\overbrace{a+\underbrace{b+c}_{123}+e}^{ab}$$
+
+\begin{equation} \label{eq:logodds}
+\frac{p(x_i|\textbf{x}_{-i})}{1-p(x_i|\textbf{x}_{-i})} = \theta_1 \sum_{i=1}^m x_i + \beta_1 \sumnbr x_ix_{i'}
+\end{equation} 
+
+\begin{equation}
+\frac{p(x_i|\bm{x}_{-i})}{1-p(x_i|\bm{x}_{-i})} = \theta_1 \sum_{i=1}^m x_i + \beta_1 \sumnbr x_ix_{i'}
+\end{equation} 
+
+Test the above equation label in here (\ref{eq:logodds}).
+
+\begin{eqnarray}
+(x+y)^2 & = & x^2 + xy + yx + y^2 \label{eqnarray1} \\
+		& = & x^2 + xy + xy + y^2 \nonumber \\
+		& = & x^2 + 2xy + y^2 \label{eqnarray2}
+\end{eqnarray}
+
+\begin{eqnarray}
+(x+y)^2 & = & x^2 + xy + yx + y^2 \\
+		& = & x^2 + 2xy + y^2 \nonumber
+\end{eqnarray}
+
+\begin{eqnarray*}
+(x+y)^2 & = & x^2 + xy + yx + y^2 \\
+		& = & x^2 + 2xy + y^2 \nonumber
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\lefteqn{a+b+c+d+e+f+g+h+i+j+k+l=} \\
+& & x+y+z+a+b+c+d+e+f+g+o+s+t+ \\
+& & u+v+w
+\end{eqnarray*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
