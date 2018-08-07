@@ -3,9 +3,11 @@
 \usepackage{kotex}
 \usepackage{latexsym}
 \usepackage{amssymb}
-\usepackage{bm}
+\usepackage{bm, amsfonts, amsmath, amsbsy}
 
 \newcommand{\sumnbr}{\sum_{\mbox{nbr}}}
+%\newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
+\newcommand{\infsup}{\mathop{\rm inf\, sup}}
 
 \begin{document}
 Hello Wolrd!
@@ -176,16 +178,73 @@ Test the above equation label in here (\ref{eq:logodds}).
 & & u+v+w
 \end{eqnarray*}
 
+Math italic $different$ is from \emph{different}.
 
+\begin{equation}
+f(x) = \left \{ \begin{array}{rl}
+x & if x > 2 or if x < -2 \\
+x & {\rm if} x > 2 {\rm or if} x < -2 \\
+x & \mbox{if} x > 2 \mbox{ or if } x < -2
+\end{array} \right.
+\end{equation}
 
+$\mathrm{Form\ e^{pdf}+ \phi(x)}$ \\
 
+$\mathit{Form\ e^{pdf}+\phi(x)}$ \\
 
+$\mathtt{Form\ e^{pdf}+\phi(x)}$ \\
 
+$\mathbf{Form\ e^{pdf}+\phi(x)}$ \\
 
+$\mathsf{Form\ e^{pdf}+\phi(x)}$ \\
 
+$\mathcal{ABC}$ \\
 
+${\bf a} = (a_1, a_2, \ldots, a_n)^T$ \\
 
+\boldmath{$a = (a_1, a_2, \ldots, a_n)^T$}\unboldmath \\
 
+\boldmath{$a \mbox{\unboldmath$=(a_1, a_2, \ldots, a_n)^T$}$} \unboldmath \\
+
+$\bm{a}=(a_1, a_2, \ldots, a_n)^T$ \\
+
+$\pmb{aX + \beta + \gamma}$ \\
+
+$\boldsymbol{aX + \beta + \gamma}$ \\
+
+$A\stackrel{f}{\to}B\stackrel{g}{\to}C$ \\ 
+
+$A \small{A} \LARGE{A} \Huge{A} \footnotesize{A}$ \\
+
+${\displaystyle \frac{a+b}{c-d}}$ \\
+
+$\frac{\textstyle a+b}{\displaystyle a+b}$ \\
+
+$\displaystyle 1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}}}$ \\
+
+$1+\frac{1}{1+\displaystyle \frac{1}{1+\displaystyle \frac{1}{1+\displaystyle \frac{1}{1+\displaystyle +\frac{1}{1+x}}}}}$ \\
+
+\begin{equation}
+\mbox{표준편차} = \sqrt{\mbox{분산}} = \sqrt{\frac{\mbox{편차}^2 \mbox{의 합}}{\mbox{표본의 개수} - 1}} \\
+\end{equation}
+
+$\int_0^\infty f(x) dx$ \\
+
+$\int \limits_0^\infty f(x) dx$ \\
+
+${\displaystyle \int \limits_0^\infty f(x) dx}$ \\ 
+
+$\int \nolimits_0^\infty f(x) dx$ \\
+
+${\displaystyle \int_0^\infty f(x) dx}$ \\
+
+$\infsup_{n\rightarrow \infty} f_n(x)$ \\
+
+$\displaystyle \infsup_{n\rightarrow \infty} f_n(x)$ \\
+
+$\infsup \limits_{n\rightarrow \infty}^{\rm woops} f_n(x)$ \\
+
+$\infsup \nolimits_{n\rightarrow \infty}^{\rm woops} f_n(x)$ \\
 
 
 
