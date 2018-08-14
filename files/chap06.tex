@@ -4,6 +4,9 @@
 
 \renewcommand{\labelitemi}{$\clubsuit$}
 %\renewcommand{\labelitemii}{\fingerright}
+\renewcommand*\descriptionlabel[1]{\hspace\labelsep\scshape\mdseries #1}
+\renewcommand{\labelenumi}{\onum{enumi}}
+\renewcommand{\labelenumii}{\ogana{enumii}}
 
 \begin{document}
 In this section we study following two..
@@ -26,6 +29,49 @@ To explain \texttt{itemize}, we have two items below;
 \item[Second] Second item
 \item[Third] Third item
 \end{itemize}
+
+\begin{description}
+\item[First] First item
+\item[Second] Second item
+\end{description}
+
+\begin{description}
+\item[] First item
+\item[] Second item
+\end{description}
+
+\begin{enumerate}
+\item First item
+\begin{enumerate}
+\item First subitem
+\end{enumerate}
+\item Second item
+\end{enumerate}
+
+\begin{enumerate}
+\item 첫째 항
+\begin{enumerate}
+\item 첫째의 첫째 항
+\item 첫째의 둘째 항
+\end{enumerate}
+\item 둘째 항
+\item 세 번째 항
+\end{enumerate}
+
+\texttt{list} 환경의 전에 있는 문자열이 여기 있고  2cm의 \verb|\topsep|를 주면
+\begin{list}{\bfseries 항목}{\topsep=2cm}
+\item 여기서 보는 것처럼
+\item \texttt{list} 환경의 전후에
+\end{list}
+\verb|\topsep| $+$ \verb|\parskip| 만큼의 공간이 생깁니다.
+
+
+
+
+
+
+
+
 
 
 
