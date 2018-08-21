@@ -20,6 +20,8 @@
 \newcommand{\htex}{\mbox{한글\TeX}}
 \newcommand{\HandS}{\Hajek and \Sidak}
 \newcommand{\pandc}[2]{\permut{#1}{#2} \ne \combi{#1}{#2}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{la}{\scshape Lemma}[section]
 
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
@@ -50,5 +52,13 @@ Hajek and Sidak proved that $\vphi (i/n)\go \vphi(u)$ as $n\go\infty$. They used
 \HandS
 
 $\pandc{n}{r}$
+
+\begin{theorem}[\LaTeX] \label{th:texusage}
+\LaTeX\ is easy enough to use for all scientists.
+\end{theorem}
+
+\begin{la}
+This is a test Lemma.
+\end{la}
 
 \end{document}
