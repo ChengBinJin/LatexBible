@@ -6,12 +6,20 @@
 \newcommand{\vphi}{\varphi}
 \newcommand{\go}{\longrightarrow}
 \newcommand{\Go}{\Longrightarrow}
-\newcommand{\Hajek}{H\'{a}jek}
-\newcommand{\Sidak}{S\v{\id}d\'s{a}k}
+\newcommand{\Hajek}{Hajek}
+\newcommand{\Sidak}{Sidak}
 \newcommand{\dlim}[1]{{\displaystyle \lim_{#1}}}
 \newcommand{\harcombi}[2]{{}_{#1}{\rm H}_{#2}}
 \newcommand{\permut}[2]{{}_{#1}{\rm P}_{#2}}
 \newcommand{\combi}[2]{{}_{#1}{\rm C}_{#2}}
+
+\newcommand{\tmp}[1][0]{$\mathrm{R}^{#1}$}
+\renewcommand{\tmp}[2][0]{$#2^#1$}
+\providecommand{\mdegree}[1]{#1\ensuremath{^\circ}}
+\newcommand{\AL}{\ensuremath{\alpha}}
+\newcommand{\htex}{\mbox{한글\TeX}}
+\newcommand{\HandS}{\Hajek and \Sidak}
+\newcommand{\pandc}[2]{\permut{#1}{#2} \ne \combi{#1}{#2}}
 
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
@@ -24,5 +32,23 @@ Hajek and Sidak proved that $\vphi (i/n)\go \vphi(u)$ as $n\go\infty$. They used
 \item $\combi{n}{r}={\displaystyle \frac{\permut{n}{r}}{r!}}$
 \item $\harcombi{n}{r}=\combi{n+r-1}{r}$
 \end{enumerate}
+
+\tmp[5] \\
+
+\tmp{0} \\
+
+\tmp[3]{x} \\
+
+\tmp{x}  \\
+
+\mdegree{360}C나 $\mdegree{360}$C는 같은 결과
+
+새로 선안한 \verb+\AL+은 \AL나 $\AL$와 같이 두 모드에서 모두 사용할 수 있다.
+
+\htex 은 한글을 지원한다.
+
+\HandS
+
+$\pandc{n}{r}$
 
 \end{document}
