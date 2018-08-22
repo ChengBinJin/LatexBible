@@ -23,6 +23,14 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{la}{\scshape Lemma}[section]
 
+\newenvironment{mytheorem}{\begin{theorem} \normalfont}{\end{theorem}}
+\newenvironment{myfbox}[1][\textwidth]%
+{\begin{tabular}{|@{\hspace{1em}}c@{\hspace{1em}}|}%
+\hline \\*[-.3\baselineskip]
+\begin{minipage}[t]{#1}}%
+{\end{minipage} \\ \vspace{-.3\baselineskip} \\
+\hline \end{tabular}}
+
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
 
@@ -60,5 +68,21 @@ $\pandc{n}{r}$
 \begin{la}
 This is a test Lemma.
 \end{la}
+
+\begin{mytheorem}[\LaTeX]
+\LaTeX\ is easy enough to use for all scientists
+\end{mytheorem}
+
+\begin{myfbox}%{4.5in}
+\vspace*{-1.5\baselineskip}
+\begin{theorem}[\LaTeX] \label{th:texsage2}
+\LaTeX\ is easy enough to use for all scientists. And it can define new environment within itself.
+\end{theorem}
+\vspace*{-1.5\baselineskip}
+\end{myfbox}
+
+\begin{myfbox}{.36\textwidth}
+This 
+\end{myfbox} WHICH
 
 \end{document}
