@@ -24,12 +24,29 @@
 \newtheorem{la}{\scshape Lemma}[section]
 
 \newenvironment{mytheorem}{\begin{theorem} \normalfont}{\end{theorem}}
+
 \newenvironment{myfbox}[1][\textwidth]%
 {\begin{tabular}{|@{\hspace{1em}}c@{\hspace{1em}}|}%
 \hline \\*[-.3\baselineskip]
 \begin{minipage}[t]{#1}}%
 {\end{minipage} \\ \vspace{-.3\baselineskip} \\
 \hline \end{tabular}}
+\newenvironment{barray}[1]
+{\left[\begin{array}{#1}}{\end{array}\right]}
+
+%\renewcommand{\dsum}[2]{\sum_{#1}^{#2}}
+%\renewcommand{\dlim}[1]{\lim_{#1}}
+%\renewcommand{\go}{\rightarrow}
+
+%\newenvironment{example}
+%{\vspace*{.6\baselineskip}}\hrule \nopagebreak[4]
+%\begin{list}{}
+%{\setlength{\rightmargin}{.2in}}
+%\refstepcounter{excntr}
+%\item[예 \thechapter .\arabic{excntr}]}
+%{\vspace*{.6\baselineskip}\hrule\end{list}}
+
+
 
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
@@ -81,8 +98,22 @@ This is a test Lemma.
 \vspace*{-1.5\baselineskip}
 \end{myfbox}
 
-\begin{myfbox}{.36\textwidth}
-This 
+\begin{myfbox}%{\textwidth}
+This chapter covers
+Defining new command, theorem and the like, and
+environment
 \end{myfbox} WHICH
+\begin{myfbox}%{\textwidth}
+makes your customized \LaTeX\ job easy and fun.
+Enjoy your \LaTeX.
+\end{myfbox}
+
+$$
+\mbox{{\boldmath $y$}}=\mbox{{\boldmath $Ab$}}
+= \begin{barray}{cc} a_{11} & a_{12}  \\ a_{21} & a_{22} \end{barray}
+\begin{barray}{c} b_1 \\ b_2 \end{barray}$$
+
+After redefining the limit, sum, and arrow $\dlim{n\go\infty}$ $\dsum{i=1}{n}$ look the same as the textstyle $\lim_{n\go\infty}$ and $\sum_{i=1}^n$.
+
 
 \end{document}
