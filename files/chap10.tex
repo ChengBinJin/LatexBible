@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{kotex}
+\usepackage{multirow}
 
 \begin{document}
 Hello world!
@@ -74,5 +75,28 @@ column 1 & column 2
 %가 \> 나 \> 다 \\
 %\a={A} \> a'{A} \> a'{A}
 %\end{tabbing}
+
+\begin{tabular}{|l|l|} \hline
+전체 행 & 개별 행 \\ \hline
+\multirow{3}{*}{네 개의 행} & 1번 행 \\
+& 2번 행 \\
+& 3번 행 \\
+& 4번 행 \\ \hline
+합 & 네 개의 행 \\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|l|} \hline
+전체 행 & 개별 행 \\ \hline
+\multirow{3}{*}[-8pt]{네 개의 행} & 1번 행 \\
+& 2번 행 \\
+& 3번 행 \\
+& 4번 행 \\ \hline
+합 & 네 개의 행 \\ \hline
+\end{tabular}
+
+
+
+
+
 
 \end{document}
