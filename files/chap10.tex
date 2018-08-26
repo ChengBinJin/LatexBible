@@ -2,6 +2,9 @@
 
 \usepackage{kotex}
 \usepackage{multirow}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{colortbl}
 
 \begin{document}
 Hello world!
@@ -93,6 +96,53 @@ column 1 & column 2
 & 4번 행 \\ \hline
 합 & 네 개의 행 \\ \hline
 \end{tabular}
+
+%\setlongtable
+%\begin{longtable}[c][l]{\hspace*{fill}}ll{\hspace*{\fill}ll}
+%\caption{\texttt{longtable} 환경을 이용한 표 \label{tab:longtable}}
+%\\ \hline \multicolumn{6}{c}{수학 모드의 부호들} \\ \hline
+%출력 & 입력 & 출력 & 입력 & 출력 & 입력 \\ \hline \endfirsthead
+%\caption[]{전 페이지에서 계속} \\ \hline
+%출력 & 입력 & 출력 & 입력 & 출력 & 입력 \\ \hline \endhead
+%\hline \multicolumn{6}{r}{다음 면에 계속} \\ \hline \endfoot
+%\hline \multicolumn{6}{r}{표~\ref{tab:longtable}의 끝.}
+%\\ \hline \endlastfoot
+%\multicolumn{6}{c}{소문자} \\
+%$\alpha$ & \verb+\alpha+ & $\beta$ & \verb+\beta+ & $\gamma$ & \verb+\grmma+ \\
+%.
+%.
+%.
+%\colorbox{mycyan}{$\lhd$}\myfootnote{\colorbox{mycyan}{\mbox{ }}표시된 부호는 \texttt{latexsym}  패키지를 사용할 때만 쓸 수 있음.}
+%.
+%.
+%.
+%\circledR & \verb+\circleR+ & \checkmark & \verb+\checkmark+ & \maltese & \verb+\maltese+ \\ \hline
+%\end{longtable}
+
+\begin{tabular}{|>{\columncolor[rgb]{0, .8, 0}[0pt]}l| >{\color{white}\columncolor[gray]{.2}[0pt]}l|}
+Green & 바탕색 \\
+By & \texttt{colortbl} 패키지 \\
+And & 회색도 사용
+\end{tabular}
+
+\begin{tabular}{|>{\columncolor[rgb]{0, .8, 0}}l| >{\color{white}\columncolor[gray]{.2}}l|}
+Green & 바탕색 \\
+By & \texttt{colortbl} 패키지 \\
+And & 회색도 사용
+\end{tabular}
+
+\begin{tabular}{|>{\columncolor[rgb]{0, .8, 0}}l|>{\color{white} \columncolor[gray]{.2}}l|}
+Green & \cellcolor[gray]{.4}바탕색 \\
+By & \texttt{colortbl} 패키지 \\
+\rowcolor[rgb]{1,0,1} And & 회색도 사용
+\end{tabular}
+
+
+
+
+
+
+
 
 
 
