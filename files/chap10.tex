@@ -5,6 +5,9 @@
 \usepackage{latexsym}
 \usepackage{color}
 \usepackage{colortbl}
+\usepackage[table]{xcolor}
+\usepackage{sidecap}
+\usepackage{graphicx}
 
 \begin{document}
 Hello world!
@@ -137,13 +140,39 @@ By & \texttt{colortbl} 패키지 \\
 \rowcolor[rgb]{1,0,1} And & 회색도 사용
 \end{tabular}
 
+\setlength\arrayrulewidth{2pt}
+\setlength\doublerulesep{2pt}
+\arrayrulecolor{blue} \doublerulesepcolor{yellow}
+\begin{tabular}{||l||c||} \hline \hline
+줄을 & 굵기와 \\ \hline
+폭을 & 일부러 \\ \hline
+크게 & 하였음 \\ \hline\hline
+\end{tabular}
 
+{
+\rowcolors[\hline]{1}{lime}{}
+\begin{tabular}{ll}
+\number \rownum & 가나 \\
+\number \rownum & 가나 \\
+3 & 가나 \\
+4 & 가나 \\
+\hiderowcolors
+5 & 가나 \\
+6 & 가나
+\end{tabular}
+}
 
+\begin{SCfigure}
+\includegraphics[width=0.6\textwidth]{../images/PyCharm_Screenshot.png}
+\caption[\texttt{SCfigure} 환경의 그림]{\texttt{sidecap} 패키지의\texttt{SCfigure} 환경으로 만든 그림이다. 이 그림은 제목이 그림의 왼쪽 또는 오른쪽에 나타난다.\label{fig:scfig}}
+\end{SCfigure}
 
-
-
-
-
+\begin{figure}
+\begin{center}
+\includegraphics[width=3em]{../images/play.png}
+\end{center}
+\caption{그림 제목 들어가요.} \label{fig:play2}
+\end{figure}
 
 
 
