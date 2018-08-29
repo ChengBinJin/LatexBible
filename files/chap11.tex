@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+
+\usepackage{kotex}
+\usepackage{graphicx}
+
+\begin{document}
+Hello World!
+
+\begin{figure}[b]
+\centering\includegraphics[scale=0.5]{../images/eps.png}
+\caption{\texttt{\symbol{92}includegraphics} 명령으로 부른 그램(축소/확대) \label{fig:eps01}}
+\end{figure}
+
+\begin{figure}
+\centering\includegraphics[width=.97\textwidth, height=5cm]{../images/eps.png}
+\caption{\texttt{\symbol{92}includegraphics} 명령의 그림 크기 조절 \label{fig:eps02}}
+\end{figure}
+
+\begin{figure}[t]
+\caption{\texttt{\symbol{92}includegraphics}로 그림 일부만 잘라오기 \label{fig:eps03}}
+\centering\includegraphics*[300pt, 0pt][600pt, 150pt]{../images/eps.png}
+\end{figure}
+
+\begin{figure}[t]
+\caption{\texttt{\symbol{92}includegraphics*} 명령의 잘라오기 및 그림 크기 변경 \label{fig:eps04}}
+\centering\includegraphics*[bb=300 0 600 150, width=0.5\textwidth, height=0.4\textwidth]{../images/eps.png}
+\end{figure}
+
+
+
+
+
+\end{document}
