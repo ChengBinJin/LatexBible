@@ -2,6 +2,7 @@
 
 \usepackage{kotex}
 \usepackage{graphicx}
+\usepackage{gensymb}
 
 \begin{document}
 Hello World!
@@ -26,7 +27,29 @@ Hello World!
 \centering\includegraphics*[bb=300 0 600 150, width=0.5\textwidth, height=0.4\textwidth]{../images/eps.png}
 \end{figure}
 
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=1.8in]{../images/eps.png}
+\includegraphics[width=1.8in, angle=-30]{../images/eps.png}
+caption{PostScript 그림 \texttt{eps.png}의 원본 및 반시계 방향으로 30 \degree 회전한 결과 \label{fig:sunrise}}
+\end{center}
+\end{figure}
 
+\begin{figure}[t]
+왼쪽 문자--
+\includegraphics*[bb=0 0 150 305]{../images/eps.png}
+--오른쪽 문자
+\caption{\texttt{*} 있는 \texttt{\symbol{92}includegraphics*} 명령 \label{fig:include*}}
+\end{figure}
+
+\begin{figure}[t]
+외쪽 문자--
+\includegraphics[bb=0 0 150 300]{../images/eps.png}
+--오른쪽 문자
+\caption{\texttt{*} 없는 \texttt{\symbol{92}includegraphics} 명령 \label{fig:include0}}
+\end{figure}
+
+\includegraphics[width=0.5\textwidth, page=5]{../images/style.pdf}
 
 
 
