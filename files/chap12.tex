@@ -1,11 +1,13 @@
-\documentclass[11pt]{article}
-
-\usepackage{kotex}
+\documentclass[a4, 12pt]{article}
+%\setstretch{1.4}
+\usepackage{natbib}
 
 \begin{document}
-Hello world\cite{chen2017dcan}!
-
-\bibliography{citation}
+\nocite{besag74, lehman86, johnson87, besag89}
+\thispagestyle{empty}
+	
+This is an example to include Besag \cite{besag74}, \cite{lehman86} for references. Johnson et. al. \cite{johnson87} is a good example, too.
+	
+\bibliography{biblio}
 \bibliographystyle{plain}
-
 \end{document}
