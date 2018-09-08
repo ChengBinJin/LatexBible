@@ -11,6 +11,8 @@
 \date[\today]{Deep CT to MR Synthesis using Paired and Unpaired Data}
 \institute{INHA University}
 
+\newcommand{\blueonly}{\only{\color{blue}}}
+
 \begin{document}
 \begin{frame}
 \titlepage
@@ -23,5 +25,48 @@
 \begin{frame}[fragile]
 \only<beamer>{프리젵네이션에만 보임.}
 \end{frame}
+
+\setbeamercovered{transparent=20}
+\begin{frame}
+\frametitle{pause 보기}
+The first slide \\
+\pause
+두 번쨰 화면 \\ 
+\pause
+The third slide \\
+\pause[2]
+두 번쨰 이후에는 계속 보입니다. \\
+\pause
+The last slide \\
+\end{frame}
+
+\begin{frame}
+\frametitle{onslide 보기-공간 차지}
+\onslide<1>{첫 번쨰 슬라이드에만 보입니다. \\}
+\onslide<2>{두 번째 슬라이드에만 보입니다. \\}
+\onslide<3>{세 번째 슬라이드 이후 보입니다. \\}
+\onslide<4>{네 번쨰 슬라이드에만 보입니다.}
+\end{frame}
+
+\begin{frame}
+\frametitle{only 보기-공간 없음}
+\only<1>{첫 번째 슬라이드에만 보입니다. \\}
+\only<2>{두 번째 슬라이드에만 보입니다. \\}
+\only<3>{세 번째 슬라이드 이후 보입니다. \\}
+\only<4>{네 번째 슬라이드에만 보입니다.}
+\end{frame}
+
+\begin{frame}
+\frametitle{\texttt{alt} 보기-공간 없음}
+\begin{itemize}
+\item<1>{첫 번째 슬라이드에만 보입니다. \newline}
+\item<2> \alt<2>{두 번째 슬라이드에만 보입니다. \newline}
+{네 번째 슬라이드에만 보입니다. \newline}
+\item<3->{세 번째 슬라이드 이후 보입니다. \newline}
+\item<4>{네 번째 슬라이드에만 보입니다.}
+\end{itemize}
+\end{frame}
+
+
 
 \end{document}
