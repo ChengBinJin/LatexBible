@@ -67,6 +67,66 @@ The last slide \\
 \end{itemize}
 \end{frame}
 
+\setbeamercovered{highly dynamic}
+\begin{frame}
+\frametitle{\texttt{temporal} 보기-공간 있음}
+\onslide<1>{첫 번째 슬라이드에만 보입니다. \\}
+\temporal<2>{Before and 2nd slide \\}
+{두 번째 슬라이드에만 보입니다. \\}
+{After 2nd slide \\}
+\onslide<3->{세 번째 슬라이드 이후 보입니다. \\}
+\onslide<4>{네 번째 슬라이드에만 보입니다.}
+\end{frame}
+
+\begin{frame}
+\frametitle{자동으로 보이기}
+\begin{itemize}[<+-| alert@+>]
+\item $\int_0^1 f(x) dx$
+\item $S = \sum_{i=1}^n a_i$
+\item 세 번째 항목
+\item The last item
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{enumerate 보기}
+\begin{enumerate}[<+->][I:]
+\item 2, 4, 5 는 삼각형이다.
+\item 2, 3, 5 는 삼각형이 될 수 없다.
+\item 7, 4, 5 는 삼각형이다.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{description 보기}
+\begin{description}[<+->][제일 긴 항목]
+\item[항목 1] 2, 4, 5 는 삼각형이다.
+\item[제일 긴 항목] 2, 3, 5 는 삼각형이 될 수 없다.
+\item[항목 3] 7, 4, 5 는 삼각형이다.
+\end{description}
+\end{frame}
+
+\begin{frame}
+\frametitle{description 보기}
+\begin{description}[<+->][항목 1]
+\item[항목 1] 2, 4, 5 는 삼각형이다.
+\item[제일 긴 항목] 2, 3, 5 는 삼각형이 될 수 없다.
+\item[항목 3] 7, 4, 5 는 삼각형이다.
+\end{description}
+\end{frame}
+
+\begin{frame}
+\frametitle{Therem env}
+\begin{theorem}<1->[이등변 삼각형의 성질]<1->
+이등변 삼각형의 두 각은 같다.
+\end{theorem}
+\begin{proof}<3->[Sketch of Proof]
+꼭짓점에서 내린 수선으로 양분되는 삼각형이 합동이다.
+\end{proof}
+\begin{example}<2->[정삼각형도 이등변 삼각형]
+두각이 60인 이등변삼각형은 정삼각형이다.
+\end{example}
+\end{frame}
 
 
 \end{document}
