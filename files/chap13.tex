@@ -1,248 +1,45 @@
-\documentclass[xcolor=table]{beamer}
-
-\usepackage{multimedia}
+\documentclass{beamer}
+%\usepackage{syshan}
 \usepackage{kotex}
+
 %\usetheme{Madrid}
-\usetheme{Rochester}
-\setbeamercovered{transparent=25}
+%\usetheme{Antibes}
+%\usetheme{JuanlesPins}
+%\usetheme{Bergen}
+\usetheme{Boadilla}  % like this theme
+%\usetheme{Pittsburgh}
+%\usetheme{Montpellier}
 
-\title{Beamer 보기}
-\subtitle{Overlay 방법들}
-\author[김성빈]{\texttt{chengbinjin@inha.edu}}
-\date[\today]{Deep CT to MR Synthesis using Paired and Unpaired Data}
-\institute{INHA University}
-
-\newcommand{\blueonly}{\only{\color{blue}}}
+\title{중심극한정리}
+\subtitle{$n$이 클 때의 $\bar{X}$의 분포}
+\author[Cheng-Bin Jin]{\texttt{chengbinjin@inha.edu}}
+\date[\today]{한국통계학회 2007년 추계학술대회}
+\institute{인하대 정보통신학과}
 
 \begin{document}
+\setbeamercovered{transparent=25}
+
 \begin{frame}
 \titlepage
 \end{frame}
 
-\begin{frame}[fragile]
-이젠 verbatim 사용 가능
-\end{frame}
-
-\begin{frame}[fragile]
-\only<beamer>{프리젵네이션에만 보임.}
-\end{frame}
-
 \begin{frame}
-\frametitle{필요한 가정}
-\begin{block}<1->{Answered Question}
-\begin{enumerate}
-\item<2-> 세 내각의 합은 180이다.
-\item<3-> $n$ 각형의 내각의 합은 $180(n-2)$이다.
-\end{enumerate}
-\end{block}
-\begin{block}<4->{Open Question}
-삼각형의 세 변의 길이를 $a$, $b$, $c$라고 할 때 $a^2, b^2$ 및 $c^2$의 관계
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{삼각형의 성질}
-\begin{block}<1->{삼각형의 성질 1}
-\alert{삼각형}은 한 변의 길이가 나머지 두 변의 길이의 합보다 작다.
-\end{block}
-
-\begin{block}<2->{삼각형의 종류}
-\begin{itemize}
-\item<2-> 예각 삼각형
-\item<3-> 직각 삼각형
-\item<4-> 둔각 삼각형
-\end{itemize}
-\end{block}
-\end{frame}
-
-\setbeamertemplate{blocks}[rounded][shadow=true]
-
-\begin{frame}
-\frametitle{삼각형의 성질}
-\begin{block}<1->{삼각형의 성질 1}
-\alert{삼각형}은 한 변의 길이가 나머지 두 변의 길이의 합보다 작다.
-\end{block}
-
-\begin{block}<2->{삼각형의 종류}
-\begin{itemize}
-\item<2-> 예각 삼각형
-\item<3-> 직각 삼각형
-\item<4-> 둔각 삼각형
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{opaqueness와 setbeamercovered}
-\setbeamercovered{still covered={\opaqueness<1->{15}},
-again covered={\opaqueness<1->{45}}}
-\begin{itemize}
-\item<1> $\int_0^1 f(x) dx$
-\item<2> $S = \sum_{i=1}^n a_i$
-\item<3> 세 번째 항목
-\item<4> The last item
-\end{itemize}
-\end{frame}
-
-\setbeamercovered{transparent=20}
-\begin{frame}
-\frametitle{pause 보기}
-The first slide \\
-\pause
-두 번쨰 화면 \\ 
-\pause
-The third slide \\
-\pause[2]
-두 번쨰 이후에는 계속 보입니다. \\
-\pause
-The last slide \\
-\end{frame}
-
-\begin{frame}
-\frametitle{onslide 보기-공간 차지}
-\onslide<1>{첫 번쨰 슬라이드에만 보입니다. \\}
-\onslide<2>{두 번째 슬라이드에만 보입니다. \\}
-\onslide<3>{세 번째 슬라이드 이후 보입니다. \\}
-\onslide<4>{네 번쨰 슬라이드에만 보입니다.}
-\end{frame}
-
-\begin{frame}
-\frametitle{only 보기-공간 없음}
-\only<1>{첫 번째 슬라이드에만 보입니다. \\}
-\only<2>{두 번째 슬라이드에만 보입니다. \\}
-\only<3>{세 번째 슬라이드 이후 보입니다. \\}
-\only<4>{네 번째 슬라이드에만 보입니다.}
-\end{frame}
-
-\begin{frame}
-\frametitle{\texttt{alt} 보기-공간 없음}
-\begin{itemize}
-\item<1>{첫 번째 슬라이드에만 보입니다. \newline}
-\item<2> \alt<2>{두 번째 슬라이드에만 보입니다. \newline}
-{네 번째 슬라이드에만 보입니다. \newline}
-\item<3->{세 번째 슬라이드 이후 보입니다. \newline}
-\item<4>{네 번째 슬라이드에만 보입니다.}
-\end{itemize}
-\end{frame}
-
-\setbeamercovered{highly dynamic}
-\begin{frame}
-\frametitle{\texttt{temporal} 보기-공간 있음}
-\onslide<1>{첫 번째 슬라이드에만 보입니다. \\}
-\temporal<2>{Before and 2nd slide \\}
-{두 번째 슬라이드에만 보입니다. \\}
-{After 2nd slide \\}
-\onslide<3->{세 번째 슬라이드 이후 보입니다. \\}
-\onslide<4>{네 번째 슬라이드에만 보입니다.}
-\end{frame}
-
-\begin{frame}
-\frametitle{자동으로 보이기}
-\begin{itemize}[<+-| alert@+>]
-\item $\int_0^1 f(x) dx$
-\item $S = \sum_{i=1}^n a_i$
-\item 세 번째 항목
-\item The last item
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{enumerate 보기}
-\begin{enumerate}[<+->][I:]
-\item 2, 4, 5 는 삼각형이다.
-\item 2, 3, 5 는 삼각형이 될 수 없다.
-\item 7, 4, 5 는 삼각형이다.
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{description 보기}
-\begin{description}[<+->][제일 긴 항목]
-\item[항목 1] 2, 4, 5 는 삼각형이다.
-\item[제일 긴 항목] 2, 3, 5 는 삼각형이 될 수 없다.
-\item[항목 3] 7, 4, 5 는 삼각형이다.
-\end{description}
-\end{frame}
-
-\begin{frame}
-\frametitle{description 보기}
-\begin{description}[<+->][항목 1]
-\item[항목 1] 2, 4, 5 는 삼각형이다.
-\item[제일 긴 항목] 2, 3, 5 는 삼각형이 될 수 없다.
-\item[항목 3] 7, 4, 5 는 삼각형이다.
-\end{description}
-\end{frame}
-
-\begin{frame}
-\frametitle{Therem env}
-\begin{theorem}<1->[이등변 삼각형의 성질]<1->
-이등변 삼각형의 두 각은 같다.
+\frametitle{Central Limit Theorem}
+\begin{theorem}<1->
+$X_1, X_2, \cdots, X_n$이 독립이고 $E[X] = \mu$,
+$Var(X)=\sigma^2 (>0)$ 이고 $\bar{X}$와 $S^2$이 각각
+표본평균, 표본분산이라고 하자.
+이때 $n \rightarrow \infty$ 이면
+\begin{equation} \label{1}
+\frac{\bar{X} - \mu}{S/\sqrt{n}} \stackrel{asymp.}{\sim}N(0,1)
+\end{equation}
+이다.
 \end{theorem}
-\begin{proof}<3->[Sketch of Proof]
-꼭짓점에서 내린 수선으로 양분되는 삼각형이 합동이다.
-\end{proof}
-\begin{example}<2->[정삼각형도 이등변 삼각형]
-두각이 60인 이등변삼각형은 정삼각형이다.
-\end{example}
-\end{frame}
-
-\begin{frame}
-\frametitle{필요한 가정}
-\begin{block}<1->{Answered Question}
+\begin{proof}[Sketch of proof]<2->
 \begin{enumerate}
-\item<2-> 세 내각의 합은 180이다.
-\item<3-> $n$ 각형의 내각의 합은 $180(n-2)$이다.
+\item<3-> 식 (\ref{1})의 $ch.f$ $\phi(t)$의 expansion을 구한다.
+\item<4-> $n \rightarrow \infty$일 때 이 함수가 수렴함을 보인다.
 \end{enumerate}
-\end{block}
-
-\begin{block}<4->{Open Question}
-삼각형으 ㅣ세 변의 길이를 $a$, $b$, $c$라고 할 때 $a^2, b^2$ 및 $c^2$의 관계
-\end{block}
+\end{proof}
 \end{frame}
-
-\begin{frame}
-\frametitle{삼각형의 성질}
-\begin{block}<1->{삼각형의 성질 1}
-\alert{삼각형}은 한 변의 길이가 나머지 두 변의 길이의 합보다 작다.
-\end{block}
-
-\begin{block}<2->{삼각형의 종류}
-\begin{itemize}
-\item<2-> 예각 삼각형
-\item<3-> 직각 삼각형
-\item<4-> 둔각 삼각형
-\end{itemize}
-\end{block}
-\end{frame}
-
-\setbeamertemplate{blocks}[rounded][shadow=true]
-
-\begin{frame}
-\frametitle{삼각형의 성질}
-\begin{block}<1->{삼각형의 성질 1}
-\alert{삼각형}은 한 변의 길이가 나머지 두 변의 길이의 합보다 작다.
-\end{block}
-
-\begin{block}<2->{삼각형의 종류}
-\begin{itemize}
-\item<2-> 예각 삼각형
-\item<3-> 직각 삼각형
-\item<4-> 둔각 삼각형
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{opaqueness와 setbeamercovered}
-\setbeamercovered{still covered={\opaqueness<1->{15}},
-again covered={\opaqueness<1->{45}}}
-\begin{itemize}
-\item<1> $\int_0^1 f(x) dx$
-\item<2> $S = \sum_{i=1}^n a_i$
-\item<3> 세 번째 항목
-\item<4> The last item
-\end{itemize}
-\end{frame}
-
-
 \end{document}
