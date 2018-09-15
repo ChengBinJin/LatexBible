@@ -1,6 +1,8 @@
 \documentclass{beamer}
 %\usepackage{syshan}
 \usepackage{kotex}
+\usepackage{colortbl}
+\usepackage{tikz}
 %\usepackage{graphicx}
 
 \usetheme{default}
@@ -114,5 +116,66 @@ $Var(X)=\sigma^2 (>0)$ 이고 $\bar{X}$와 $S^2$이 각각
 \end{column}
 \end{columns}
 \end{frame}
+
+\begin{frame}
+\frametitle{Row-wise display}
+\centerline{
+\begin{tabular}{l!{\vrule}rrrrr}
+\rowcolor[rgb]{.9,0,0} age group & 10s & 20s & 30s & 40s & 합 \\ \hline
+\rowcolor[gray]{.7} \pause 남 & 10 & 5 & 78 & 45 & 138 \\
+\rowcolor[rgb]{0, .9, 0} \pause 여 & 15 & 34 & 2 & 12 & 63 \\
+\rowcolor[rgb]{0, 0, .9} \pause 합 & 25 & 39 & 80 & 57 & 201\\ \hline
+\end{tabular}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Column-wise display}
+\begin{tabular}{l| r<{\onslide<2->} r<{\onslide<3->}
+r<{\onslide<4->} r<{\onslide<4->} r<{\onslide<5>}r} \hline
+age group & 10s & 20s & 30s & 40s & 합 \\ \hline
+남 & 10 & 5 & 78 & 45 & 138 \\
+여 & 15 & 34 & 2 & 12 & 63 \\ \hline
+합 & 25 & 39 & 80 & 57 & 201 \\ \hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{\texttt{tikz} 패키지}
+\begin{center}
+\begin{tikzpicture}[yscale=5, xscale=1]
+\node<1->[red] at (1, 0.6) {정규분포 곡선};
+node[below=0.8cm, white] at (1,0)
+{$f(x)=\frac{1}{\sqrt{2\pi}}
+\Big\{-\frac{(x-\mu)^2}{2\sigma^2}\Big\}$};
+\draw<1->[thick,->](-3.5,0) -- (5.5,0);
+\draw<1->[black, domain=-3:3]
+plot(\x, {1/sqrt(2*pi)*exp(-pow(\x,2)/2)})
+node[below] at (0, 0) {\small $\mu=0$};
+\draw<1->[dotted] (0,0) -- (0,0.3989423); %평균선
+%% 두 번째 슬라이드
+\onslide<2->{
+\draw[red, domain=-2:4]
+plot(\x, {1/sqrt(2*pi)*exp(-pow(\x-1,2)/2)})
+node[below] at (1,0) {\small $\mu=1$};
+\draw[red, dotted] (1,0) -- (1, 0.3989423); %평균선
+}
+%% 세 번째 슬라이드
+\only<3->{
+\draw[blue, domain=-1:5]
+plot(\x, {1/sqrt(2*pi)*exp(-pow(\x-2,2)/2)})
+node[below] at (2,0) {\small $\mu=2$};
+\draw[blue, dotted] (2,0) -- (2,0.3989423); %평균선
+}
+%% 마지막 슬라이드
+\draw<4> node[below=0.8cm] at (1,0)
+{$f(x)=\frac{1}{\sqrt{2\pi}}
+\Big\{-\frac{(x-\mu)^2}{2\sigma^2} \Big\}$};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+
+
 
 \end{document}
