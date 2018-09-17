@@ -4,6 +4,11 @@
 \usepackage{colortbl}
 \usepackage{tikz}
 %\usepackage{graphicx}
+\usepackage{hyperref}
+
+\renewcommand{\insertgotosymbol}{$\Uparrow$}
+\renewcommand{\insertskipsymbol}{$\Rightarrow$}
+\renewcommand{\insertreturnsymbol}{$\Leftarrow$}
 
 \usetheme{default}
 %\usetheme{Madrid}
@@ -172,10 +177,31 @@ node[below] at (2,0) {\small $\mu=2$};
 \Big\{-\frac{(x-\mu)^2}{2\sigma^2} \Big\}$};
 \end{tikzpicture}
 \end{center}
+\hyperlinkframestart{\beamerbutton{frame start}}
+\hyperlinkframeend{\beamerbutton{frame end}}
+\hyperlinkframestartnext{\beamerbutton{frame start next}}
+\hyperlinkframeendprev{\beamerbutton{frame end prev}}
+\hyperlinkdocumentstart{\beamerbutton{document start}}
+\hyperlinkdocumentend{\beamerbutton{document end}}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}[<+->]
+\item 통계의 마술
+\item 5\% 의 진정한 의미
+\item 등등
+\end{itemize}
+\hypertarget<2>{item:second}{}
+\hyperlinkslideprev{\beamerskipbutton{prev}}
+\hyperlinkslidenext{\beamerskipbutton{next}}
+\end{frame}
 
-
+\begin{frame}
+\title{Test hyper link}
+\hyperlink{item:second}{\beamerbutton{Jump to the 2nd item}}
+\hyperlink{item:second}{\beamergotobutton{Jump to the 2nd item}}
+\hyperlink{item:second}{\beamerskipbutton{Jump to the 2nd item}}
+\end{frame}
 
 
 \end{document}
