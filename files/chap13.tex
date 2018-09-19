@@ -5,6 +5,7 @@
 \usepackage{tikz}
 %\usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{multimedia}
 
 \renewcommand{\insertgotosymbol}{$\Uparrow$}
 \renewcommand{\insertskipsymbol}{$\Rightarrow$}
@@ -17,7 +18,7 @@
 %\usetheme{Bergen}
 %\usetheme{Boadilla}  % like this theme
 %\usetheme{Pittsburgh}
-%\usetheme{Montpellier}
+%\usetheme{Montpellier}e
 %\usetheme{PaloAlto}
 %\usetheme{Goettingen}
 %\usetheme{Marburg}
@@ -201,6 +202,17 @@ node[below] at (2,0) {\small $\mu=2$};
 \hyperlink{item:second}{\beamerbutton{Jump to the 2nd item}}
 \hyperlink{item:second}{\beamergotobutton{Jump to the 2nd item}}
 \hyperlink{item:second}{\beamerskipbutton{Jump to the 2nd item}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sound Effects}
+Music playes
+\begin{itemize}
+\item \sound[inlinesound, repeat, label=Music1]{Can you hear the Music?}{./multimedia/spacemusic.au}
+\item Auto Start \sound[inlinesound, autostart, loop, label=Music2]{}{./multimedia/spacemusic.au}
+\item \sound[inlinesound, loop, channels=1, encoding=Signed, samplingrage=22050, bitpersample=8, label=Music3]
+\item \sound[\inlinesound, loop, channels=1, encoding=ALaw, samplingrate=22050, bitpersample=8, label=Music4]{뉴스알람2}{./multimedia/newsalarm_ALaw.wav}
+\end{itemize}
 \end{frame}
 
 
