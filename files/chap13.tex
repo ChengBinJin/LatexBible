@@ -204,16 +204,33 @@ node[below] at (2,0) {\small $\mu=2$};
 \hyperlink{item:second}{\beamerskipbutton{Jump to the 2nd item}}
 \end{frame}
 
-\begin{frame}
-\frametitle{Sound Effects}
-Music playes
-\begin{itemize}
-\item \sound[inlinesound, repeat, label=Music1]{Can you hear the Music?}{./multimedia/spacemusic.au}
-\item Auto Start \sound[inlinesound, autostart, loop, label=Music2]{}{./multimedia/spacemusic.au}
-\item \sound[inlinesound, loop, channels=1, encoding=Signed, samplingrage=22050, bitpersample=8, label=Music3]
-\item \sound[\inlinesound, loop, channels=1, encoding=ALaw, samplingrate=22050, bitpersample=8, label=Music4]{뉴스알람2}{./multimedia/newsalarm_ALaw.wav}
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Sound Effects}
+%Music playes
+%\begin{itemize}
+%\item \sound[inlinesound, repeat, label=Music1]{Can you hear the %Music?}{./multimedia/spacemusic.au}
+%\item Auto Start \sound[inlinesound, autostart, loop, %label=Music2]{}{./multimedia/spacemusic.au}
+%\item \sound[inlinesound, loop, channels=1, encoding=Signed, %samplingrage=22050, bitpersample=8, label=Music3]
+%\item \sound[\inlinesound, loop, channels=1, encoding=ALaw, %samplingrate=22050, bitpersample=8, label=Music4]{뉴스알람2}{./%multimedia/newsalarm_ALaw.wav}
+%\end{itemize}
+%\end{frame}
 
+\begin{frame}
+\frametitle{Movie Embeding Effects}
+\begin{center}
+
+\begin{tabular}{|c|c|c|} \hline
+Movie 1 & Movie 2 & Movie 3 \\ \hline
+%\movie[borderwidth=1pt, loop, showcontrols=true, label=Movie1, poster, width=100pt, height=80pt]{}{./multimedia/test.avi} &
+%\movie[borderwidth=0pt, loop, start=0.5s, showcontrols=true, label=Movie2, width=3cm, height=2.4cm]{Test.avi}{./multimedia/test.avi} &
+%\movie[borderwidth=0pt, loop, label=Movie3, externalviewer]{\underline{Play Movie}}{./multimedia/test.avi} \\ \hline
+\end{tabular}
+\end{center}
+
+%\hyperlinkmovie[resume]{Movie1}{\beamerbutton{Resume Movie 1}}
+%\hyperlinkmovie[stop]{Movie1}{\beamerbutton{Stop Movie 1}}
+%\hyperlinkmovie[pause]{Movie2}{\beamerbutton{Pause Movie 2}}
+%\hyperlinkmovie[resume]{Movie2}{\beamerbutton{Resume Movie 2}}
+\end{frame}
 
 \end{document}
