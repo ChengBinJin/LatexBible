@@ -1,0 +1,29 @@
+\documentclass[10pt]{article}
+
+\begin{document}
+Hello world!
+
+%\put(13,-4){\shortstack{first layer\\layer 2\\셋째 켜}}
+%\put(43,-4){\shortstack[l]{first layer\\layer 2\\셋째 켜}}
+%\put(73,-4){\shortstack[r]{first layer\\layer 2\\셋째 켜}}
+
+%\put(15,-5){\circle{10}}
+%\put(35,-5){\circle*{3}}
+%\put(55,-10){\shortstack[l]{\texttt{\symbol{92}put(35,-5)\{\symbol{92}circle*\{3\}\}}}}\\*[.15in]
+
+\put(20,0){\oval(10,4)[t]}
+\put(40,0){\oval(10,5)[bl]}
+\null \hfill \begin{minipage}[t]{7cm}
+\verb+\put(20,0){\oval(10,4)[t]}+\\
+\verb+\put(40,0){\oval(10,5)[bl]}+
+\end{minipage}
+
+\newsavebox{\testbox}
+\savebox{\testbox}{\fbox{\shortstack{가 나\\다 라}}}
+\begin{center}
+\rotatebox{30}{\usebox{\testbox}}
+\rotatebox{0}{\usebox{\testbox}}
+\rotatebox{-30}{\usebox{\testbox}}
+\end{center}
+
+\end{document}
