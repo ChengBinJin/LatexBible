@@ -11,19 +11,71 @@ Hello world!
 %\put(35,-5){\circle*{3}}
 %\put(55,-10){\shortstack[l]{\texttt{\symbol{92}put(35,-5)\{\symbol{92}circle*\{3\}\}}}}\\*[.15in]
 
-\put(20,0){\oval(10,4)[t]}
-\put(40,0){\oval(10,5)[bl]}
-\null \hfill \begin{minipage}[t]{7cm}
-\verb+\put(20,0){\oval(10,4)[t]}+\\
-\verb+\put(40,0){\oval(10,5)[bl]}+
-\end{minipage}
+%\put(20,0){\oval(10,4)[t]}
+%\put(40,0){\oval(10,5)[bl]}
+%\null \hfill \begin{minipage}[t]{7cm}
+%\verb+\put(20,0){\oval(10,4)[t]}+\\
+%\verb+\put(40,0){\oval(10,5)[bl]}+
+%\end{minipage}
 
 \newsavebox{\testbox}
 \savebox{\testbox}{\fbox{\shortstack{가 나\\다 라}}}
 \begin{center}
-\rotatebox{30}{\usebox{\testbox}}
-\rotatebox{0}{\usebox{\testbox}}
-\rotatebox{-30}{\usebox{\testbox}}
+%\rotatebox{30}{\usebox{\testbox}}
+%\rotatebox{0}{\usebox{\testbox}}
+%\rotatebox{-30}{\usebox{\testbox}}
 \end{center}
+
+\begin{figure}
+\unitlength=0.9mm
+\begin{picture}(137,150)(0,0)
+\put(0,145){\line(0,-1){10}}
+\put(0, 135){\line(1,0){130}}
+\put(130, 135){\line(0,1){10}}
+\put(50, 137){\texttt{list} 이전 본문}
+
+\put(65,130){\vector(0,1){5}}
+\put(65,130){\vector(0,-1){5}}
+\put(67,129){\texttt{\symbol{92}topsep + \symbol{92}parskip + [\symbol{92}paropsep]}}
+\put(2.5,123){\vector(0,1){5}}
+\put(3,130.5){\texttt{\symbol{92}itemindent}}
+\put(0,123){\vector(1,0){5}}
+\put(5,118){\framebox(20,7){항 제목}}
+\put(30,123){\vector(1,0){5}}
+\put(30,123){\vector(-1,0){5}}
+\put(25,126.5){\texttt{\symbol{92}labelsep}}
+\put(35,100){\framebox(60,25){\shortstack[l]{\mbox{}\\
+첫째 항 \\ 첫 문다}}}
+\put(35,118){\dashbox(15,7){\null}}
+\put(35,121.5){\vector(1,0){15}}
+\put(52,120){\texttt{\symbol{92}itemindent}}
+\put(112.5,120){\vector(1,0){17.5}}
+\put(112.5,120){\vector(01,0){17.5}}
+\put(99,115){\texttt{\symbol{92}rightmargin}}
+\put(15,116){\vector(1,0){10}}
+\put(15,116){\vector(-1,0){10}}
+\usepackage{metalogo}
+\put(5,111){\texttt{\symbol{92}labelwidth}}
+\put(17.5, 107){\vector(1,0){17.5}}
+\put(17.5,107){\vector(01,0){17.5}}
+\put(2,103){\texttt{\symbol{92}leftmargin}}
+
+\put(65,95){\vector(0,1){60}}
+\put(65,95){\vector(0,-1){10}}
+\put(67,93){\texttt{\symbol{92}parsep}}
+
+\put(35,72){\line(1,0){60}}
+\put(35,72){\line(0,1){10}}
+\put(35,82){\line(1,0){7}}
+\put(42,82){\line(0,1){8}}
+\put(42,90){\line(1,0){53}}
+\put(95,zs)
+\put
+\put
+\put
+\put
+\put
+\end{picture}
+\end{figure}
 
 \end{document}
