@@ -1,68 +1,40 @@
 \documentclass[11pt]{article}
-\usepackage[hangul]{kotex} % 각종 기본설정하는 부분 [preamble]
+%\usepackage[hangul]{kotex}  % 각종 기본설정하는 부분 [preamble]
+\usepackage[hangul]{kotex}  % 각종 기본설정하는 부분 [preamble]
 \usepackage{graphicx}
-\usepackage{lipsum}
 \title{나의 첫 문서}
 \author{김성빈\thanks{인하대학교}}
+
 \begin{document}
 \maketitle
 \tableofcontents
-%\section{lipsum}
-%\lipsum
-\section{첫 문서\label{ss:normal}}
-나의 첫 \LaTeX\ 문서를 작성하였습니다. 첫 
-수식이 $y=f(x)=a^2 - bx - c$입니다.
+\section{첫 문서}
+나의 첫 \LaTeX\ 문서를 작성하였습니다. 첫 수식이 $y=f(x)=ax^2-bx-c$ 입니다.
+
 두 번째 수식은 전개된(display math) 입니다.
-\begin{equation} \label{eq:eq1}
-f(x) = \frac{1}{2\pi} \exp{-\frac{(x-\mu)^2}{2\sigma^2}}, 
-\ \ \ -\infty < x < \infty
+\begin{equation}
+f(x) = \frac{1}{2\pi} \exp{-\frac{(x-\mu)^2}{2\sigma^2}}, \ \ \ \ \ \  -\infty < x < \infty
 \end{equation}
 % 문서의 내용
-문서의 내용을 추가 입력합니다.
-% 추가합니다.
-위의 식에서 $\mu$는 모평균, $\sigma^2$은 모분산이며 이 함수는 
-정규뷴포 $N(\mu, \sigma^2)$의 확률밀도함수입니다. 만일 $\mu=1$, 
-$\sigma=1$이면 표준정규뷴포라 하고 함수는
-\begin{equation} \label{eq:eq2}
-f(x) = \frac{1}{2\pi} \exp{-\frac{x^2}{2}}, 
-\ \ \ -\infty < x < \infty
+문서의 내용을 추가 입력합니다. 100\%!
+
+%추가합니다.
+위의 식에서 $\mu$는 모평균, $\sigma^2$은 모분산이며 이 함수는 정규분포 $N(\mu, \sigma^2)$의 학률밀도함수입니다. 만일 $\mu=1$, $\sigma=1$이면 표준정규푼포라 하고 함수는
+\begin{equation}
+f(x)=\frac{1}{2\pi} \exp{-\frac{x^2}{2}}, \ \ \ -\infty < x < \infty
 \end{equation}
 가 됩니다. 그림은
-\begin{figure}
 \begin{center}
 \includegraphics[width=3em]{../images/play.png}
 \end{center}
-\caption{그림 제목 들어가요.} \label{fig:play2}
-\end{figure}
 로 삽입합니다.
-\section{기능 추가 \label{ss:add}}
-\LaTeX 에서는 사용자가 입력의 위치를 잡기보다는 \LaTeX 의 
-기능을 사용하는 것이 좋습니다.
+
+\section{기능 추가}
+\LaTeX\ 에서는 사용자가 입력의 위치를 잡기보다는 \LaTeX 의 기능을 사용하는 것이 좋습니다.
 \begin{enumerate}
 \item 이와 같이 \texttt{enumerate} 환경을 사용하거나,
 \item \verb|\section| 명령을 사용하거나
 \item \verb|\tableofcontents| 명령을 사용하는 등
 \end{enumerate}
 의 기능입니다.
-\section{인용해 보기}
-제 \ref{ss:normal}절의 식 (\ref{eq:eq1})\은 정규분포일 때의
-확률밀도함수이며 그림 \ref{fig:play2}\와는 아무 관계가 없다.
-\pageref{eq:eq1}면의 식 (\ref{eq:eq1})의 특수한 경우로 $\mu=0$,
-$\sigma=1$이면 식 (\ref{eq:eq2})가 된다. 제\ref{ss:add}절은
-\pageref{ss:add}면에 나온다.
-\end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \end{document}
