@@ -2,9 +2,33 @@
 
 \usepackage{kotex}
 
+\hyphenation{Ghost-Script}
+\showhyphens{difficult}
+
 \begin{document}
 \LaTeX\    은 문장 안에서 하나     이상의 공간은   한 개의 공간으로 취급한다.
 
 \setlength{\parindent}{1cm}
 \LaTeX\ 의    문단은 한 줄 이상의 빈 줄을 주는 것으로 만들어진다.
+
+여기서 \newline\newline 한 줄 \\ Here go\newline \null \newline two empty lines.
+
+여기서 \newline 한 줄 \\ Here go \\ \\ two empty lines
+
+여기에 한 줄 \\[2cm]
+Here go \\ an empty lines
+
+또, 따른 한 줄을\linebreak 중간에서 바꾸는 방법
+
+`작은따움표'와 ``큰따옴표''는 만들기 쉽다.
+
+``\,`큰' 따옴표는 `크다'.\,''
+
+-, --, ---
+
+텍스트로 그림을 저장한 Po\-st\-Script 파일을 화면으로 볼 수 있게 하는 프로그램으로 Gho\-st\-Script가 있다.
+
+텍스트로 그림을 저장한 PostScript 파일을 화면으로 볼 수 있게 하는 프로그램으로 Ghostscript가 있다.
+
+여기의 Ghostscript는 Ghost-Script로 하이픈을 무지하게 하고 싶은 Ghostscript 이다. 이 출력은 \verb|\hyphenation| 선언이 위와 같이 주어진 경우의 출력이다.
 \end{document}
