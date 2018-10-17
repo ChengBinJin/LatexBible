@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{kotex}
+\usepackage{fix-cm}
 
 \title{Hello World}
 \author{Johnson, R. A. \and 심송용 \thanks{Supported by a grant.}}
@@ -24,6 +25,11 @@ This is a test of the abstract environment in \LaTeX.
 \textup{It's a \textbf{test} \textrm{output}} \\
 \textit{It's a \textbf{test} \texttt{output}} \\
 \textsc{It's a \textbf{test} \textsf{output}} \\
-\textsl{It's a \textbf{test} \texttt{output}}
+\textsl{It's a \textbf{test} \texttt{output}}  \\
+{\Large\bf ABC} \\
+{\bf\Large ABC} \\
+{\fontsize{2.5pt}{5pt}\selectfont This is smaller than tiny!, 한글은? 잘되네요.} \\
+{\tiny This is equal to tiny!, 한글은? 잘되네요.} \\
+{\fontsize{3.3cm}{3.8cm}\selectfont HUGE \\ 더 크게}
 
 \end{document}
