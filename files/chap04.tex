@@ -7,5 +7,31 @@
 %\addtolength{\topsidemargin}{-1cm}
 
 \begin{document}
-Hello world!
+여기에 공\hspace{1in}간.
+
+여기에 공\hspace{-3em}간이 있다.
+
+여기에 공\hspace{.1\textwidth}간이 있다. 
+
+"\verb|\hspace*{.5\textwidth}| 여기에 공간이 있다."
+
+\hspace*{.5\textwidth} 여기에 공간이 있다.
+
+여기에 세로 공\vspace{1cm}간을 만들려고 하면 문장의 중간이기 때문에 예상 외의 결과를 얻는다. 즉, 한 줄을 완성한 후에 공간을 만든다. 여기에 세로 공\\ \vspace{1cm}간을 만들려고 하면 문장의 중간이라도 행이 바뀐 뒤이기 때문에 가능하다.
+
+``여기에 세로 공\\*[1cm]간을 만들려고 하면 ...'' 의 결과는
+
+여기에서 바로 줄\vskip1.em 바꾸기가 됩니다.
+
+이 문장은 \hspace{\fill} 양쪽 끝에 있다. 
+
+이 문장은 \hspace{\fill} 세 부분 \hspace{\fill}으로 이루어진다. \\
+
+\vfill의 예로 만든 공간으로 설명 목적상 페이지의 중간에 공간이 있습니다.
+
+\verb|\dotfill|의 \dotfill효과
+
+\verb|\hrulefill|의 \hrulefill효과 \hrulefill데모
+
+
 \end{document}
