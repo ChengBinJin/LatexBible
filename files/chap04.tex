@@ -6,6 +6,7 @@
 \addtolength{\oddsidemargin}{-1cm}
 %\addtolength{\topsidemargin}{-1cm}
 
+
 \begin{document}
 여기에 공\hspace{1in}간.
 
@@ -31,7 +32,36 @@
 
 \verb|\dotfill|의 \dotfill효과
 
-\verb|\hrulefill|의 \hrulefill효과 \hrulefill데모
+\verb|\hrulefill|의 \hrulefill효과 \hrulefill데모 \\
 
+
+\begin{minipage}[t]{2in}
+\texttt{minipage}는 \texttt{parbox}와 비슷하다. 반드시 폭을 주어야 한다.
+\end{minipage}
+\textbf{그러나} \
+\begin{minipage}[b]{2in}
+위치는 줄 수도 있고 주지 않을 수도 있다. 지정해 주지 않으면 \texttt{c}\footnote{중앙(center)을 의미}를 가정한다.
+\end{minipage}
+
+%\marginpar{\footnotesizes 오른쪽에 만들어진 가장자리 문단}
+
+\marginpar{오른쪽에 만들어진 가장자리 문단}
+
+\addtolength{\marginparwidth}{-1cm}
+\reversemarginpar
+\marginpar{왼쪽에 만들어진 가장자리 문단}
+
+\normalmarginpar
+\addtolength{\marginparwidth}{1cm}
+
+\rule{3mm}{3mm}, \rule[2mm]{3mm}{3mm}
+
+\fbox{\rule{1cm}{0cm}\rule{0cm}{1cm}} \\
+
+%\newcommand{\hangl}{\lower -0.2em\hbox{{ㅎ\kern-.53em\lower .33em\hbox{$\cdot$}\kern -.7em\lower 1ex\hbox{ㄴ}}\lower 0.2em\hbox{글}}}
+
+%\hangl
+
+\LaTeX 은 문장의 일부를 \raisebox{.6ex}{올리거나} 또는 \raisebox{-.6ex}{내릴} 수 있다.
 
 \end{document}
