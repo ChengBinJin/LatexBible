@@ -1,6 +1,9 @@
 \documentclass[11pt]{article}
 
 \usepackage{kotex}
+\usepackage{bm}
+
+\newcommand{\sumnbr}{\sum_{\mbox{nbr}}}
 
 \begin{document}
 $y=2x-1$ \\
@@ -91,5 +94,58 @@ $\displaystyle \frac{a-b}{c+d}$ 와 $\frac{a-b}{c+d}$
 $\displaystyle{\frac{a-b}{c+d}}$
 
 $\frac{\displaystyle a-b}{\displaystyle c+d}$
+
+$\vec{x} + \vec{y} = \left \{ 
+\begin{array}{l} a \\ b \end{array}
+\right.$
+
+$\textbf{A} = \left( 
+\begin{array}{ccc} 
+a_{11}& a_{12} & a_{13} \\
+a_{21}& a_{22}& a_{23} \\
+a_{31}& a_{32}& a_{33} \\
+\end{array} 
+\right)$
+
+$$\widehat{a-1} = \widetilde{x-y} + \widehat{\mbox{Cov}}$$
+
+$\begin{array}{lrc}
+a & b & c\\
+a-b & b-c & c-a \\
+x^2+2x+1 & x^2+2x+1 & x^2+2x+1 \\
+\end{array}$
+
+\begin{equation}
+\begin{array}{*{3}{c@{+}}c@{=}c}
+a_{11}x_1 & a_{12}x_2 & \cdots & a_{1n}x_n & b_1 \\
+a_{11}x_1 & a_{12}x_2 & \cdots & a_{1n}x_n & b_1 \\
+\multicolumn{5}{c}{\vdots} \\
+a_{11}x_1 & a_{12}x_2 & \cdots & a_{1n}x_n & b_1 \\
+\end{array}
+\end{equation}
+
+$\left( 
+\begin{array}{c}
+\left| 
+\begin{array}{cc}
+a & b \\
+c & d \\
+\end{array} 
+\right| \\
+e \\ 
+f \\
+\end{array} 
+\right)$
+
+$$x^n = \overbrace{x \times x \times \cdots \times x}$$
+
+$$\overbrace{a+\underbrace{b+\overline{c+d}}+e}$$
+
+$$\overbrace{a+\underbrace{b+c}_{123}+e}^{ab}$$
+
+\begin{equation} \label{eq:logodds}
+\frac{p(x_i|\bm{x}_{-i})}{1-p(x_i|\bm{x}_{-i})} = 
+\theta_1 \sum_{i=1}^m x_i + \beta_1 \sumnbr x_ix_{i'}
+\end{equation}
 
 \end{document}
