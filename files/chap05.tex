@@ -2,6 +2,7 @@
 
 \usepackage{kotex}
 \usepackage{bm}
+\usepackage{amsmath}
 
 \newcommand{\sumnbr}{\sum_{\mbox{nbr}}}
 
@@ -147,5 +148,66 @@ $$\overbrace{a+\underbrace{b+c}_{123}+e}^{ab}$$
 \frac{p(x_i|\bm{x}_{-i})}{1-p(x_i|\bm{x}_{-i})} = 
 \theta_1 \sum_{i=1}^m x_i + \beta_1 \sumnbr x_ix_{i'}
 \end{equation}
+
+\begin{eqnarray}
+(x+y)^2 & = & x^2 + xy + yx + y^2 \label{eqnarray1} \\
+		& = & x^2 + xy + xy + y^2 \nonumber \\
+		& = & x^2 + 2xy + y^2 \label{eqnarray2}
+\end{eqnarray}
+
+\begin{eqnarray}
+(x+y)^2 & = & x^2 + xy + yx + y^2 \\
+		& = & x^2 + 2xy + y^2 \nonumber
+\end{eqnarray}
+
+\begin{eqnarray*}
+\lefteqn{a+b+c+d+e+f+g+h+i+j+k+l=}  \\
+& & x+y+z+a+b+c+d+e+f+g+o+s+t+ \\
+& & u+v+w
+\end{eqnarray*}
+
+Math italic $different$ is from \emph{different}.
+
+\begin{equation}
+f(x) = \left\{ \begin{array}{rl}
+x & if x > 2 or if x < -2 \\
+x & {\rm if } x > 2 {\rm or if} x < -2 \\
+x & \mbox{if } x > 2 \mbox{ or if } x < -2
+\end{array}
+\right.
+\end{equation}
+
+$\mathrm{Form\ e^{pdf} + \Phi(x)}$ \\
+$\mathit{Form\ e^{pdf} + \Phi(x)}$ \\
+$\mathtt{Form\ e^{pdf} + \Phi(x)}$ \\
+$\mathbf{Form\ e^{pdf} + \Phi(x)}$ \\
+$\mathsf{Form\ e^{pdf} + \Phi(x)}$ \\
+$\mathcal{ABC}$
+
+$${\bf a} = (a_1, a_2, \ldots, a_n)^T$$
+
+\boldmath{$a = (a_1, a_2, \ldots, a_n)^T$}\unboldmath
+
+\boldmath{$a \mbox{\unboldmath $=(a_1, a_2, \ldots, a_n)^T$} $} \unboldmath
+
+$\bm{a} = (a_1, a_2, \ldots, a_n)^T$
+
+$\pmb{aX + \beta + \gamma}$
+
+$\boldsymbol{aX + \beta + \gamma}$ 
+
+$A\stackrel{f}{\to}B\stackrel{g}{\to}C$
+
+$A \small{A} \LARGE{A} \Huge{A} \footnotesize{A}$
+
+${\displaystyle\frac{a+b}{c-d}}$
+
+${\frac{\textstyle a+b}{\textstyle c-d}}$
+
+$1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}}}$ \\
+
+$1+\displaystyle\frac{1}{1+\displaystyle\frac{1}{1+\displaystyle\frac{1}{1+\displaystyle\frac{1}{1+\displaystyle\frac{1}{1+x}}}}}$
+
+
 
 \end{document}
