@@ -2,7 +2,9 @@
 
 \usepackage{kotex}
 \usepackage{bm}
-\usepackage{amsmath}
+\usepackage{amsmath, amsfonts}
+\usepackage{subeqnarray}
+\usepackage{dotseqn}
 
 \newcommand{\sumnbr}{\sum_{\mbox{nbr}}}
 \newcommand{\infsup}{\mathop{\rm inf\,sup}}
@@ -284,5 +286,49 @@ A =
 \end{array}
 \]
 
+$$f(x)= \left\{
+\begin{array}{ll} 
+x & \mbox{for } x>0 \\
+-x & \mbox{for } -1<x \leq 0 \\
+x^2 & \mbox{otherwise} 
+\end{array}
+\right.$$
 
+$$f(x)= \left\{
+\begin{array}{rl} 
+x & \mbox{for } x>0 \\
+-x & \mbox{for } -1<x \leq 0 \\
+x^2 & \mbox{otherwise} 
+\end{array}
+\right.$$
+
+$${a+b \over c+d}$$ $$\frac{a+b}{c+d}$$ 
+
+
+$$\{x \Big| x \in X \}$$
+
+$$\{x \Bigm| x\in X \}$$
+
+$$\{x \Bigl| x\in X \}$$
+
+$$\{x \Bigr| x\in X \}$$
+
+$$\Biggl\{ \biggl\{ \Bigl\{ \bigl\{ \{ \} \bigr\} \Bigr\} \biggr\} \Biggr\}$$
+
+$$|b-|x+y||$$
+
+$$\Bigl| b-|x+y| \Bigr|$$
+
+\begin{subeqnarray}
+&& \frac{1}{\sqrt{2\pi} \sigma} \exp\{-\frac{(x-\mu)^2}{2\sigma^2}\} \mbox{ if } \mu=0, \sigma=1 \slabel{eq:teqn} \\
+&& \frac{1}{\sqrt{2\pi} \sigma} \exp\{-\frac{x^2}{2\sigma^2}\} \mbox{ if } \mu=0 \slabel{eq:mu=0} \\
+&& \frac{1}{\sqrt{2\pi}} \exp \{-\frac{x^2}{2}\} \mbox{ if } \mu=0, \sigma=1 \slabel{eq:std}
+\end{subeqnarray}
+식 \ref{eq:mu=0}\와 \ref{eq:std}\는 식 \ref{eq:teqn}의 특별한 경우이다.
+
+$$\mathbb{A B C D E R}$$
+
+$$\mathfrak{Mathfrack Font}$$
+
+\circledR \checkmark \maltese
 \end{document}
