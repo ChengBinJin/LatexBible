@@ -2,12 +2,13 @@
 
 \usepackage{kotex}
 \usepackage{bm}
-\usepackage{amsmath, amsfonts}
+\usepackage{amsmath, amsfonts, amscd}
 \usepackage{subeqnarray}
 \usepackage{dotseqn}
 
 \newcommand{\sumnbr}{\sum_{\mbox{nbr}}}
 \newcommand{\infsup}{\mathop{\rm inf\,sup}}
+\newcommand{\go}{\longrightarrow}
 
 \begin{document}
 $y=2x-1$ \\
@@ -516,6 +517,33 @@ $x=y \mod c$
 
 $x=y \pod d$
 
+\begin{equation}
+\int f d\mu \quad
+\iint f d\mu \quad
+\iiint f d\mu \quad
+\iiiint f d\mu \idotsint fd\mu
+\end{equation}
+
+$$\sqrt{a} + \sqrt{y} + \sqrt{d} \qquad
+\sqrt{a} + \sqrt{\smash[b] y} + \sqrt{\smash[b] d}$$
+
+\begin{eqnarray*}
+\begin{CD}
+@>a \alpha+\beta+\gamma>> \\
+@>> a\alpha+\beta+\gamma > \\
+@<a \alpha+\beta + \gamma << \\
+@<< a \alpha+\beta+\gamma < \\
+@< \alpha < \beta < \\
+\end{CD}
+\end{eqnarray*}
+
+\begin{equation*}
+\begin{CD}
+F(x) @<< n \go \infty < G(x) \\
+@V{n\go\infty}V{m \sim n}V	@AA m\go\infty A \\
+\mathcal{F}(x) @=		\mathcal{G}
+\end{CD}
+\end{equation*}
 
 
 \end{document}
