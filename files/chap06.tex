@@ -3,25 +3,26 @@
 \usepackage{kotex}
 
 \renewcommand{\labelitemi}{$\clubsuit$}
-%\renewcommand{\labelitemii}{\fingerright}
+%\renewcommand{\labelitemii}{$\fingerright$}
 \renewcommand*\descriptionlabel[1]{\hspace\labelsep\scshape\mdseries #1}
 \renewcommand{\labelenumi}{\onum{enumi}}
 \renewcommand{\labelenumii}{\ogana{enumii}}
 
 \begin{document}
-In this section we study following two..
+In this section we study following two....
 \begin{itemize}
-\item Firs item
+\item First item
 \item Second item
 \end{itemize}
 
 To explain \texttt{itemize}, we have two items below;
 \begin{itemize}
 \item First item got subitems
-  \begin{itemize}
-    \item This is first subitem
-    \item Second subitem
-  \end{itemize}
+\begin{itemize}
+\item This is first subitem
+\item Second subitem
+\end{itemize}
+\item Second item
 \end{itemize}
 
 \begin{itemize}
@@ -36,8 +37,13 @@ To explain \texttt{itemize}, we have two items below;
 \end{description}
 
 \begin{description}
-\item[] First item
-\item[] Second item
+\item First item
+\item Second item
+\end{description}
+
+\begin{description}
+\item[First] First item
+\item[Second] Second item
 \end{description}
 
 \begin{enumerate}
@@ -57,19 +63,6 @@ To explain \texttt{itemize}, we have two items below;
 \item 둘째 항
 \item 세 번째 항
 \end{enumerate}
-
-\texttt{list} 환경의 전에 있는 문자열이 여기 있고  2cm의 \verb|\topsep|를 주면
-\begin{list}{\bfseries 항목}{\topsep=2cm}
-\item 여기서 보는 것처럼
-\item \texttt{list} 환경의 전후에
-\end{list}
-\verb|\topsep| $+$ \verb|\parskip| 만큼의 공간이 생깁니다.
-
-
-
-
-
-
 
 
 
