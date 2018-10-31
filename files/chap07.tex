@@ -2,8 +2,44 @@
 
 \usepackage{kotex}
 
-\begin{document}
-\section{This is a Section}
+\renewcommand{\thesubsection}{\Roman{subsection}}
+%\renewcommand{\theenumi}{\arabic{chapter}.\arabic{enumi}}
 
-print the section: \thesection
+%\newcount\hour % 현재시각 in minute from midnight
+%\hour=\time\divide\hour by 60 % integer part of \hour=\time/60
+%\newcount \minute 	% 현재시각 분
+%\minute=\hour\multiply\minute by -60 % \minute=\hour*60 분
+%\minute=\minute\advance\minute by \time % \minute=\time-\minute
+%\newcommand*\ampm{% \ifnum\number\time>720 오후\else 오전\fi} % 720분 초과는 오후
+%\newcommand{\nowampm}{%\ifnum\hour > 12 \advance\hour by -12\fi % 13시 이상은 오후로
+%\ampm\ \number\hour 시 \number\minute 분}
+%\newcommand{\now}{\number\hour 시 \number\minute 분}
+
+\begin{document}
+\tableofcontents
+%\chapter{리스트 만들기}
+
+\section{\texttt{itemize}}
+\section{\texttt{description}}
+\section{\texttt{enumerate}}
+\subsection{한글 번호}
+%\chapter{번호 붙이기}
+\section{잘못된 예}
+
+Following three ....
+\begin{enumerate}
+\item This is first
+\item Second item
+\item The Last item
+\end{enumerate}
+
+\newcounter{D@anki}
+\setcounter{D@anki}{\year}
+\addtocounter{D@anki}{2333}
+\def\dankitoday{단기~\arabic{D@anki}~년 \number\month~월 \number\day~일}
+
+오늘은 \dankitoday 이다.
+
+
+
 \end{document}
