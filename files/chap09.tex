@@ -24,6 +24,22 @@
 \newcommand{\HandS}{\Hajek \ and \Sidak}
 \newcommand{\pandc}[2]{\permut{#1}{#2} \ne \combin{#1}{#2}}
 
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{coro}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{syntax}{문법}
+\newenvironment{mytheorem}{\begin{theorem} \normalfont}{\end{theorem}}
+
+\newenvironment{myfbox}[1][\textwidth]%
+{\begin{tabular}{|@{\hspace{1em}}c@{\hspace{1em}}|}%
+\hline \\*[-.3\baselineskip]
+\begin{minipage}[t]{#1}}%
+{\end{minipage} \\ \vspace{-.3\baselineskip} \\
+\hline \end{tabular}}
+
+\newenvironment{barray}[1]{\left[\begin{array}{#1}}{\end{array}\right]}
+
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
 
@@ -50,6 +66,54 @@ $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
 
 $\pandc{n}{r}$
 
+\begin{theorem}[\LaTeX] \label{th:texusage}{\  \\
+\LaTeX\ is easy enough to use for all scientists}
+\end{theorem}
+
+\begin{large}
+This is a test Lemma.
+\end{large}
+
+\begin{mytheorem}[\LaTeX]
+{\ \\
+\LaTeX\ is easy enough to use for all scientists}
+\end{mytheorem}
+
+\begin{myfbox}[4.5in]
+\vspace*{-1.5\baselineskip}
+\begin{theorem}[\LaTeX] \label{th:texsage2}
+\LaTeX\ is easy enough to use for all scientists. And it can define new environment within itself.
+\end{theorem}
+\vspace*{-1.5\baselineskip}
+\end{myfbox}
+
+\begin{myfbox}[.36\textwidth]
+This chapter covers that defining new command, theorem and the like, and environment
+\end{myfbox} WHICH
+\begin{myfbox}[.36\textwidth]
+makes your customized \LaTeX\ job easy and fun. Enjoy your \LaTeX.
+\end{myfbox}
+
+$$\mbox{{\boldmath $y$}}=\mbox{{\boldmath $Ab$}} = \begin{barray}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{barray}
+\begin{barray}{c} b_1 \\ b_2 \\ \end{barray}$$
+
+\newenvironment{example}
+{\vspace*{.6\baselineskip}\hrule\nopagebreak[4]
+\begin{list}{}
+{\setlength{\rightmargin}{.2in}}
+\refstepcounter{excntr}
+\item[예 \thechapter.\arabic{excntr}]}
+{\vspace*{.6\baselineskip}\hrule\end{list}}
+
+\begin{verbatim}
+\begin{example}
+\newtheorem{lemma}{Lemma}|
+\newtheorem{theorem}{Theorem}[chapter]|
+\newtheorem{coro}{Corollary}|
+\newtheorem{defn}{Definition}|
+\newtheorem{syntax}{문법}[chapter]
+\end{example}
+\end{verbatim}
 
 
 
