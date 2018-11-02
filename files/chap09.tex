@@ -1,76 +1,48 @@
 \documentclass[11pt]{article}
 
 \usepackage{kotex}
+\usepackage{amsmath}
 
-\newcommand{\dsum}[2]{\displaystyle \sum_{#1}^{#2}}
+\newcommand{\dsum}[2]{{\displaystyle \sum_{#1}^{#2}}}
 \newcommand{\vphi}{\varphi}
 \newcommand{\go}{\longrightarrow}
 \newcommand{\Go}{\Longrightarrow}
-\newcommand{\Hajek}{Hajek}
-\newcommand{\Sidak}{Sidak}
+\newcommand{\Hajek}{H\'{a}jek}
+\newcommand{\Sidak}{S\v{\i}d'{a}k}
 \newcommand{\dlim}[1]{{\displaystyle \lim_{#1}}}
+
 \newcommand{\harcombi}[2]{{}_{#1}{\rm H}_{#2}}
 \newcommand{\permut}[2]{{}_{#1}{\rm P}_{#2}}
-\newcommand{\combi}[2]{{}_{#1}{\rm C}_{#2}}
+\newcommand{\combin}[2]{{}_{#1}{\rm C}_{#2}}
 
 \newcommand{\tmp}[1][0]{$\mathrm{R}^{#1}$}
 \renewcommand{\tmp}[2][0]{$#2^#1$}
-\providecommand{\mdegree}[1]{#1\ensuremath{^\circ}}
 \newcommand{\AL}{\ensuremath{\alpha}}
 \newcommand{\htex}{\mbox{한글\TeX}}
-\newcommand{\HandS}{\Hajek and \Sidak}
-\newcommand{\pandc}[2]{\permut{#1}{#2} \ne \combi{#1}{#2}}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{la}{\scshape Lemma}[section]
 
-\newenvironment{mytheorem}{\begin{theorem} \normalfont}{\end{theorem}}
-
-\newenvironment{myfbox}[1][\textwidth]%
-{\begin{tabular}{|@{\hspace{1em}}c@{\hspace{1em}}|}%
-\hline \\*[-.3\baselineskip]
-\begin{minipage}[t]{#1}}%
-{\end{minipage} \\ \vspace{-.3\baselineskip} \\
-\hline \end{tabular}}
-\newenvironment{barray}[1]
-{\left[\begin{array}{#1}}{\end{array}\right]}
-
-%\renewcommand{\dsum}[2]{\sum_{#1}^{#2}}
-%\renewcommand{\dlim}[1]{\lim_{#1}}
-%\renewcommand{\go}{\rightarrow}
-
-%\newenvironment{example}
-%{\vspace*{.6\baselineskip}}\hrule \nopagebreak[4]
-%\begin{list}{}
-%{\setlength{\rightmargin}{.2in}}
-%\refstepcounter{excntr}
-%\item[예 \thechapter .\arabic{excntr}]}
-%{\vspace*{.6\baselineskip}\hrule\end{list}}
-
-
+\providecommand{\mdegree}[1]{#1\ensuremath{^\circ}}
+\newcommand{\HandS}{\Hajek \ and \Sidak}
+\newcommand{\pandc}[2]{\permut{#1}{#2} \ne \combin{#1}{#2}}
 
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
 
-Hajek and Sidak proved that $\vphi (i/n)\go \vphi(u)$ as $n\go\infty$. They used  ''user-defined'' displaystyle $\dlim{n\go\infty}$ rather than textstyle $\lim_{n\go\infty}$.
+\Hajek and \Sidak proved that $\vphi(i/n)\go\vphi(u)$ as $n\go\infty$. They used ``user--defined'' displaystyle $\dlim{n\go\infty}$ rather than textstyle $\lim_{n\go\infty}$.
 
 순열, 조합, 중복조합 간에는 다음 관계가 있다.
 \begin{enumerate}
 \item $\permut{n}{r}=n(n-1)\cdots(n-r+1)$
-\item $\combi{n}{r}={\displaystyle \frac{\permut{n}{r}}{r!}}$
-\item $\harcombi{n}{r}=\combi{n+r-1}{r}$
+\item $\combin{n}{r}={\displaystyle \frac{\permut{n}{r}}{r!}}$
+\item $\harcombi{n}{r}=\combin{n+r-1}{r}$
 \end{enumerate}
 
-\tmp[5] \\
+\tmp[3]{x}
 
-\tmp{0} \\
-
-\tmp[3]{x} \\
-
-\tmp{x}  \\
+\tmp{x}
 
 \mdegree{360}C나 $\mdegree{360}$C는 같은 결과
 
-새로 선안한 \verb+\AL+은 \AL나 $\AL$와 같이 두 모드에서 모두 사용할 수 있다.
+새로 선언한 \verb+\AL+은 \AL 나 $\AL$와 같이 두 모드에서 모두 사용할 수 있다.
 
 \htex 은 한글을 지원한다.
 
@@ -78,42 +50,7 @@ Hajek and Sidak proved that $\vphi (i/n)\go \vphi(u)$ as $n\go\infty$. They used
 
 $\pandc{n}{r}$
 
-\begin{theorem}[\LaTeX] \label{th:texusage}
-\LaTeX\ is easy enough to use for all scientists.
-\end{theorem}
 
-\begin{la}
-This is a test Lemma.
-\end{la}
-
-\begin{mytheorem}[\LaTeX]
-\LaTeX\ is easy enough to use for all scientists
-\end{mytheorem}
-
-\begin{myfbox}%{4.5in}
-\vspace*{-1.5\baselineskip}
-\begin{theorem}[\LaTeX] \label{th:texsage2}
-\LaTeX\ is easy enough to use for all scientists. And it can define new environment within itself.
-\end{theorem}
-\vspace*{-1.5\baselineskip}
-\end{myfbox}
-
-\begin{myfbox}%{\textwidth}
-This chapter covers
-Defining new command, theorem and the like, and
-environment
-\end{myfbox} WHICH
-\begin{myfbox}%{\textwidth}
-makes your customized \LaTeX\ job easy and fun.
-Enjoy your \LaTeX.
-\end{myfbox}
-
-$$
-\mbox{{\boldmath $y$}}=\mbox{{\boldmath $Ab$}}
-= \begin{barray}{cc} a_{11} & a_{12}  \\ a_{21} & a_{22} \end{barray}
-\begin{barray}{c} b_1 \\ b_2 \end{barray}$$
-
-After redefining the limit, sum, and arrow $\dlim{n\go\infty}$ $\dsum{i=1}{n}$ look the same as the textstyle $\lim_{n\go\infty}$ and $\sum_{i=1}^n$.
 
 
 \end{document}
