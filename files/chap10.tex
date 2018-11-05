@@ -4,4 +4,45 @@
 
 \begin{document}
 Hello world!
+
+\begin{tabular}{r@{.}l}
+    3&14159 \\
+   16&2 \\
+12345&689 \\
+\end{tabular}
+
+\begin{tabular}{|l|l|l|} \hline
+첫째 줄은 & 높이는 & 기본 높이 \\ \hline
+이지만 & 둘째 줄의 & 높이는 \\[1cm] \hline
+1cm가 & 추가 & 되었다. \\ \hline
+\end{tabular}
+
+\begin{table}[t]
+\caption{\texttt{tabular} 환경의 이용 보기\label{tab:tabular}}
+\begin{center}
+\begin{tabular}{l|cr}
+성명 & 주소지 & 월수입 \\ \hline
+김철수 & 서울 & 1,000,000 \\
+이보라미 & 충청남도 & 600,000
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[b]
+\caption{tabular 환경으로 만든 보기--2\label{tab:tabular2}}
+\begin{center}
+\begin{tabular}{|r||r@{--}l|*{2}{c|}p{2in}|} \hline
+\multicolumn{6}{|c|}{S 사의 주가} \\ \hline \hline
+& \multicolumn{2}{|c|}{주가} & & & \\ \cline{2-3}
+연도 & \multicolumn{1}{r@{\vline}}{최저} & 
+최고 & 거래량 & 액수 & \multicolumn{1}{c|}{특기 사항} \\ \hline
+1972 & 97 & 172 & 111 & 12 & 상장 초기로서 특이 사항은 없으나 관심을 받았음 \\ \hline
+83 & 130 & 200 & 100 & 900 & 80년대 초 \\ \hline
+95 & \multicolumn{5}{|c|}{이 자료는 가상임} \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
 \end{document}
