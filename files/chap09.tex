@@ -40,6 +40,13 @@
 
 \newenvironment{barray}[1]{\left[\begin{array}{#1}}{\end{array}\right]}
 
+\renewcommand{\dsum}[2]{\sum_{#1}^{#2}}
+\renewcommand{\dlim}[1]{\lim_{#1}}
+\renewcommand{\go}{\rightarrow}
+
+\renewcommand{\dlim}[1]{{\displaystyle \lim_{#1}}}
+\renewcommand{\dsum}[2]{{\displaystyle \sum_{#1}^{#2}}}
+
 \begin{document}
 $\dsum{i=1}{n} x_i$ is the same as $\sum_{i=1}^n x_i$.
 
@@ -114,6 +121,8 @@ $$\mbox{{\boldmath $y$}}=\mbox{{\boldmath $Ab$}} = \begin{barray}{cc} a_{11} & a
 \newtheorem{syntax}{문법}[chapter]
 \end{example}
 \end{verbatim}
+
+After redefining the limit, sum, and arrow $\dlim{n\go\infty}$ $\dsum{i=1}{n}$ look the same as the textstyle $\lim_{n\go\infty}$ and $\sum_{i=1}^n$.
 
 
 
