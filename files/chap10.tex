@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{kotex}
+\usepackage{multirow}
 
 \begin{document}
 Hello world!
@@ -43,6 +44,45 @@ Hello world!
 \end{center}
 \end{table}
 
+\begin{tabular}{l|l}
+제1열 & 제2열 \\ \hline column 1 & column 2
+\end{tabular}
+
+{\tabcolsep=0in
+\begin{tabular}{l|l}
+제1열 & 제2열 \\ \hline column 1 & column 2
+\end{tabular}}
+
+\begin{tabbing}
+김 철수 \= 통계학과 \\
+이 미숙 \> 수학과 \\
+야수 오모리 \> 경제학과
+\end{tabbing}
+
+\begin{tabbing}
+탭 설정만 \= \kill
+여기에 \> 탭 설정 \= 새 탭 설정 \+\+ \\
+세 번쨰 줄에 출력 \\
+\< \< 제1열 \> 제2열 \> 제3열 \\
+오른쪽으로 \' 정렬 \- \\
+2열 \> 3열 \- \\
+1열 \\
+\pushtabs
+갑 \= 을 \\
+ \> 병 \' 계는 오른쪽 끝 \\
+\poptabs
+가 \> 나 \> 다 \\
+\a ={A} \> \a'{A} \> \a'{A}
+\end{tabbing}
+
+\begin{tabular}{|l|l|} \hline
+전체 행	& 개별 행 \\ \hline
+\multirow{4}{*}{네 개의 행} & 1번 행 \\
+& 2번 행 \\
+& 3번 행 \\
+& 4번 행 \\ \hline
+합 & 네 개의 행 \\ \hline
+\end{tabular}
 
 
 \end{document}
