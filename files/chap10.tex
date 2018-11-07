@@ -4,6 +4,8 @@
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage[table]{xcolor}
+\usepackage{sidecap}
+\usepackage{graphicx}
 
 
 \begin{document}
@@ -131,6 +133,11 @@ By & \texttt{colortbl} 패키지 \\
 6 & 가나 \\
 \end{tabular}
 }
+
+\begin{SCfigure}
+\includegraphics[width=0.6\textwidth]{../images/eps.png}
+\caption[\texttt{Scfigure} 환경의 그림]{\texttt{sidecap} 패키지의 \texttt{SCfigure} 환경으로 만든 그림이다. 이 그림은 제목 그림의 왼쪽 똔느 오른쪽에 나나탄다.\label{fig:scfig}}
+\end{SCfigure}
 
 
 \end{document}
