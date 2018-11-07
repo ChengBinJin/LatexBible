@@ -1,5 +1,41 @@
 \documentclass[11pt]{article}
 
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
 \begin{document}
 Hello world!
+
+\begin{figure}[t]
+\centering\includegraphics[scale=0.5]{../images/eps.png}
+\caption{\texttt{\symbol{92}includegraphics} 명령으로 부른 그림(축소/확대) \label{fig:texgr01}}
+\end{figure}
+
+\begin{figure}[t]
+\centering\includegraphics[width=0.97\textwidth, height=5cm]{../images/eps.png}
+\caption{\texttt{\symbol{92}includegraphics} 명령으로 부른 그림(축소/확대) \label{fig:texgr02}}
+\end{figure}
+
+\begin{figure}[t]
+\caption{\texttt{\symbol{92}includegraphics}로 그림 일부만 잘로오기 \label{fig:texgr03}}
+\centering\includegraphics*[300pt, 0pt][600pt, 150pt]{../images/eps.png}
+\end{figure}
+
+\begin{figure}[t]
+\caption{\texttt{\symbol{92}includegraphics}로 그림 일부만 잘로오기 \label{fig:texgr04}}
+\centering\includegraphics*[bb=300 0 600 150, width=0.5\textwidth, height=.4\textwidth]{../images/eps.png}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=1.8in]{../images/play.png}
+\includegraphics[width=1.8in, angle=-30]{../images/play.png}
+\caption[그림의 회전]{PostScript 그림 \texttt{play.png}의 원본 및 반시계 방향으로 30\textdegree 회전한 결과 \label{fig:play}}
+\end{center}
+\end{figure}
+
+
+
+
 \end{document}
