@@ -4,8 +4,12 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{floatflt}
 
 \graphicspath{{../images/}}
+
+%\renewcommand{\thesubfigure}{(\hangulb{subfigure})\space}
 
 \begin{document}
 Hello world!
@@ -96,5 +100,32 @@ Hello world!
 \item $a_0>a_1>a_2>\cdots>a_n>\cdots \geq \sqrt{3}$이 됨을 보여라.
 \item $\displaystyle{\lim_{n \rightarrow \infty}}a_n$을 구하여라.
 \end{enumerate}
+
+\begin{figure}[!t]
+\centerline{
+\subfigure[회전]{\includegraphics[width=1.6in, height=2in, angle=45]{play.png}}
+\subfigure[원래 크기]{\includegraphics[width=1.6in, height=2in]{play.png}}}
+\caption{\texttt{subfigure} 패키지를 이용한 그림}
+\end{figure}
+
+\newpage
+\clearpage
+\begin{floatingfigure}{80mm}
+\fbox{\includegraphics[width=7cm]{eps.png}}
+\caption{\mbox{ }\texttt{floatingfigure} 환경의 예 2}
+\end{floatingfigure}
+
+\begin{floatingtable}
+{
+\begin{tabular}{|l|p{2.6in}|} \hline
+\textit{option} & 사용 결과 \\ \hline \hline
+\texttt{l} & 그림을 왼쪽에 넣을 경우에 설정한다. \\ \hline
+\texttt{r} & 그림을 오른쪽에 넣을 경우에 설정한ㄷ. \\ \hline
+\texttt{p} & 그림을 짝수면에는 왼쪽에 홀수면에는 오른쪽에 넣을 경우에 설정한다. (기본값) \\ \hline
+\texttt{v} & \texttt{\symbol{92}usepackage} 명령에서 정해준 옵션을 따른다. \\ \hline
+\end{tabular}
+}
+\caption{\texttt{floatingtable} 환경의 옵션}
+\end{floatingtable}
 
 \end{document}
