@@ -6,6 +6,8 @@
 \usepackage{tikz}
 \usepackage{subfigure}
 \usepackage{floatflt}
+\usepackage{wrapfig}
+\usepackage{rotating}
 
 \graphicspath{{../images/}}
 
@@ -38,7 +40,7 @@ Hello world!
 \begin{center}
 \includegraphics[width=1.8in]{play.png}
 \includegraphics[width=1.8in, angle=-30]{play.png}
-\caption[그림의 회전]{PostScript 그림 \texttt{play.png}의 원본 및 반시계 방향으로 30\textdegree 회전한 결과 \label{fig:play}}
+%\caption[그림의 회전]{PostScript 그림 \texttt{play.png}의 원본 및 반시계 방향으로 30\degree 회전한 결과 \label{fig:play}}
 \end{center}
 \end{figure}
 
@@ -127,5 +129,53 @@ Hello world!
 }
 \caption{\texttt{floatingtable} 환경의 옵션}
 \end{floatingtable}
+
+\begin{wraptable}[15]{l}{8cm}
+\caption{\texttt{wrapfig} 의 \emph{loc} 옵션
+\label{tab:wraptable}}
+\begin{tabular}{p{2cm}|p{5cm}}\hline
+옵션 & 결과 \\ \hline
+\texttt{r R} & 텍스트의 오른쪽에 그림이나 표를 만든다. \\
+\texttt{l L} & 텍스트의 왼쪽에 그림이나 표를 만든다. \\
+\texttt{i I} & 책을 기준으로 책을 펼쳤을 때 그림이 안쪽으로 들어가게 한다. \\
+\texttt{o O} & 책을 기준으로 책을 펼쳤을 때 그림이 바깥쪽으로 들어가게 한다. \\ \hline
+\end{tabular}
+\end{wraptable}
+
+\begin{wrapfigure}[14]{r}{7cm}
+\caption{\texttt{wrapfigure} 환경으로 만든 \texttt{pdf.ps}
+\label{fig:wrapfigure}}
+\includegraphics[scale=0.5]{eps.png}
+\end{wrapfigure}
+
+\begin{sidewaystable}
+\caption[\texttt{rotating} 패키지에서 제공하는 환경]
+{\texttt{rotating} 패캐지에서 제공하는 여러 가지 환경: 이 표는 아래의 \texttt{sidewaystalbe}로 만들었으며 각도는 반시계 방향의 각도이다.
+\label{tab:sidewaystalbe}}
+\begin{center}
+\begin{tabular}{|l||p{5in}|} \hline
+\texttt{sideways} & \verb|\begin{sideways}| 회전할 입력 \verb|\end{sideways}|로 사용하며 주어진 내용을 시계 반대 방향으로 90도 회전시킨다. \\ \hline
+\texttt{turn} & \verb|\begin{turn}{각도}|입력 \verb|\end{turn}|으로 사용한다. \texttt{turn}은 주어진 내용을 주어진 각도만큼 회전시키낟. \\ \hline
+\texttt{rotate} & \verb|\begin{rotate}{각도}| 입력 \verb|\end{rotate}|로 사용한다. \texttt{rotate}도 주어진 내용을 주어진 각도만큼 회전시키는데 \texttt{turn}과의 차이는 회전 후의 출력을 위한 공간을 남기지 않는다는 것이다. 따라서 \texttt{turn}은 회전할 때 회전에 의해 추가로 만들어야 하는 공간을 고려하지만 \texttt{totate}는 이를 고려하지 않아 전후좌우의 다른 출력과 겹칠 수 있다. \\ \hline
+\texttt{sidewaysfigure} & \verb|\begin{figure}| 와 \verb|\end{figure}|의 \texttt{figure} 대신에 \texttt{sidewaysfigure}를 쓰면 그림을 90도 회전시킨다. \\ \hline
+\texttt{sidewaystalbe} & \verb|\begin{table}|와 \verb|\end{table}|의 \texttt{table} 대신에 \texttt{sidewaystable}를 쓰면 표를 90도 회전시킨다. \\ \hline
+\end{tabular}
+\end{center}
+\end{sidewaystable}
+
+\begin{center}
+---\fbox{\shortstack{\LARGE A B C \\ \LARGE D E F\\ \LARGE G H I}}---
+---\begin{turn}{30}
+\fbox{\shortstack{\LARGE A B C\\ \LARGE D E F\\ \LARGE G H I}}
+\end{turn}---
+---\begin{rotate}{30}
+\fbox{\shortstack{\LARGE A B C\\ \LARGE D E F\\ \LARGE G H I}}
+---\end{rotate}---
+---\begin{sideways}
+\fbox{\shortstack{\LARGE A B C\\ \LARGE D E F\\ \LARGE G H I}}
+\end{sideways}---
+\end{center}
+
+
 
 \end{document}
