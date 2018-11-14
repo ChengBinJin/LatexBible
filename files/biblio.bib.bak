@@ -1,38 +1,38 @@
 @ARTICLE{besag74,
-	AUTHOR="Besag, J.",
-	year=1974,
-	TITLE="Spatial Interaction and the Statistical Analysis of 
-	Lattice System",
-	JOURNAL="Journ. Roy. Statist. Soc.",
-	VOLUMN=36,
-	PAGES="192--256"}
+AUTHOR="Besag, J.",
+year=1974,
+TITLE="Spatial Interaction and the Statistical Analysis of Lattice System",
+JOURNAL="Journ. Roy. Statist. Soc.", 
+VOLUMN=36,
+PAGES="192--236"}
+
 @ARTICLE{besag89,
-	author="Besag, J. and Clifford, P.",
-	year=1989,
-	title="Generalized Monte Carlo Significant Tests",
-	journal="Biometrika",
-	volumn=76,
-	pages="633-642"}
+author="Besag, J. and Clifford, P.",
+year=1989,
+title="Generalized Monte Carlo Significant Test",
+journal="Biometrika",
+volumn=76,
+pages="633-642"}
+
 @book{gilbert92,
-	author="Gilbert, R.O. and Simpson, J.C.",
-	year=1992,
-	Title="Statistical Methods for 
-	Evaluating the Attainment of Cleanup Standars",
-	volumn=3,
-	publisher="Battelle Pacific Northwest Laboratory",
-	address="Richland, WA."}
+author="Gilbert, R.O. and Simpson, J.C.",
+year=1992,
+Title="Statistical Methods for Evaluating the Attainment of Cleanup Standards",
+volumn=3,
+publisher="Battelle Pacific Northwest Laboratory",
+address="Richland, WA."
+}
+
 @article{johnson87,
-	author="Johnson, R.A. and Verrill, S. and Moore, D. H.",
-	year=1987,
-	title="Two Sample Rank Tests for Detecting Changes That
-	Occur in a Small Proportion of the Treated Population",
-	journal="Biometrics",
-	volumn=43,
-	pages="641--665"}
+author="Johnson, R.A. and Verrill, S. and Moore, D. H.",
+year=1987,
+title="Two Sapmle Rank Tests for Detecting Changes That Occur in a Small Proportion of the Treated Population",
+journal="Biometrics",
+volumn=43,
+pages="641--655"}
+
 @book{lehman86,
-	author="Lehman, E. L.",
-	year=1986,
-	title="Testing Statistical Hypotheses",
-	edition=2,
-	publisher="John Wiley and Sons",
-	address="New York, NY"}
+author="Lehamn, E. L.",
+year=1986,
+title="Testing Statistical Hypotheses",
+ed}
