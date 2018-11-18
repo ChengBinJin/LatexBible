@@ -39,5 +39,79 @@ The last slide \\
 \onslide<4->{네 번째 슬라이드에만 보입니다.}
 \end{frame}
 
+\newcommand{\blueonly}{\only{\color{blue}}}
+\begin{frame}
+\blueonly<2> 두 번째 슬라이는?
+\end{frame}
+
+\begin{frame}
+\frametitle{only 보기-공간 없음}
+\only<1>{첫 번째 슬라이드에만 보입니다.\\}
+\only<2>{두 번째 슬라이드에만 보입니다.\\}
+\only<3>{세 번쨰 슬라이드 이후 보입니다.\\}
+\only<4>{네 번째 슬라이드에만 보입니다.}
+\end{frame}
+
+\begin{frame}
+\frametitle{\texttt{alt} 보기-공간 없음}
+\begin{itemize}
+\item<1>{첫 번째 슬라이드에만 보입니다. \newline}
+\item<2> \alt<2>{두 번째 슬라이드에만 보입니다. \newline}
+{네 번째 슬라이드에만 보입니다. \newline}
+\item<3->{세 번째 슬라이드 이후 보입니다. \newline}
+\item<4>{네 번째 슬라이드에만 보입니다.}
+\end{itemize}
+\end{frame}
+
+\setbeamercovered{highly dynamic}
+\begin{frame}
+\frametitle{\texttt{temporal} 보기-공간 있음}
+\onslide<1>{첫 번째 슬라이드에만 보입니다.\\}
+\temporal<2>{Before 2nd slide\\}
+{두 번째 슬라이드에만 보입니다. \\}
+{After 2nd slide \\}
+\onslide<3->{세 번째 슬라이드 이후 보입니다.\\}
+\onslide<4>{네 번째 슬라이드에만 보입니다.}
+\end{frame}
+
+\begin{frame}
+\frametitle{자동으로 보이기}
+\begin{itemize}[<+-| alert@+>]
+\item $\int_0^1 f(x) dx$
+\item $S = \sum_{i=1}^n a_i$
+\item 세 번째 항목
+\item The last item
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{enumerate 보기}
+\begin{enumerate}[<+->][I:]
+\item 2, 4, 5 는 삼각형이다.
+\item 2, 3, 5 는 삼각형이 될 수 없다.
+\item 7, 4, 5 는 삼각형이다.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{description 보기}
+\begin{description}[<+->][제일 긴 항목]
+\item[항목 1] 2, 4, 5 는 삼각형이다.
+\item[제일 긴 항목] 2, 3, 5 는 삼각형이 될 수 없다.
+\item[항목 3] 7, 4, 5 는 삼각형이다.
+\end{description}
+\end{frame}
+
+\begin{frame}
+\frametitle{description 보기}
+\begin{description}[<+->][항목 1]
+\item[항목  1] 2, 4, 5 는 삼각형이다.
+\item[제일 긴 항목] 2, 3, 5 는 삼각형이 될 수 없다.
+\item[항목 3] 7, 4, 5 는 삼각형이다.
+\end{description}
+\end{frame}
+
+
+
 
 \end{document}
