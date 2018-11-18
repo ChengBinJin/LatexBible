@@ -11,6 +11,10 @@
 \date[\today]{인하대학교 정보통신학과}
 \institute{컴퓨터비젼 연구실}
 
+\usetheme{Rochester}
+\setbeamercovered{transparent=25}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
 \begin{document}
 
 \begin{frame}
@@ -111,7 +115,61 @@ The last slide \\
 \end{description}
 \end{frame}
 
+\begin{frame}
+\frametitle{Therem env}
+\begin{theorem}<1->[이등변 삼각형의 성질]<1->
+이등변 삼각형의 두 가은 같다.
+\end{theorem}
+\begin{proof}<3->[Sketch of Proof]
+꼭짓점에서 내린 수선으로 양분되는 삼각형이 합동이다.
+\end{proof}
+\begin{example}<2->[정삼각형도 이등변 삼각형]
+두각이 60인 이딩변삼각형은 정삼각형이다.
+\end{example}
+\end{frame}
 
+\begin{frame}
+\frametitle{필요한 가정}
+\begin{block}<1->{Answered Question}
+\begin{enumerate}
+\item<2-> 세 내각의 합은 180 이다.
+\item<3-> $n$ 각형의 내각은 합은 $180(n-2)$ 이다.
+\end{enumerate}
+\end{block}
+\begin{block}<4->{Open Question}
+삼각형의 세 변의 길이를 $a$, $b$, $c$라고 할 때 $a^2, b^2$ 및 $c^2$의 관
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{삼각형의 성질}
+\begin{block}<1->{삼각형의 성질 1}
+\alert{삼각형}은 한 변의 길이가 나머지 두 변의 길이의 합보다 작다.
+\end{block}
+
+\begin{block}<2->{삼각형의 종류}
+\begin{itemize}
+\item<2-> 예각 삼각형
+\item<3-> 직각 삼각형
+\item<4-> 둔각 삼각형
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{삼각형의 성질}
+\begin{block}<1->{삼각형의 성질 1}
+\alert{삼각형}은 한 변의 변의 길이가 나머지 두 변의 길이의 합보다 작다.
+\end{block}
+
+\begin{block}<2->{삼각형의 종류}
+\begin{itemize}
+\item<2-> 예각 삼각형
+\item<3-> 직각 삼각형
+\item<4-> 둔각 삼각형
+\end{itemize}
+\end{block}
+\end{frame}
 
 
 \end{document}
