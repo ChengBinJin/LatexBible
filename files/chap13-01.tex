@@ -1,0 +1,37 @@
+\documentclass{beamer}
+%\usepackage{syshan}
+\usepackage{kotex}
+
+\usetheme{Madrid}
+
+\title{중심극한정리}
+\subtitle{$n$이 클 때의 $\bar{X}$의 분포}
+\author[심송용]{\texttt{sysim@hallym.ac.kr}}
+\date[\today]{한국통계학회 2007년 추계학술대회}
+\institute{한림대 통계학과}
+
+\begin{document}
+\setbeamercovered{transparent=25}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Central Limit Theorem}
+\begin{theorem}<1->
+$X_1, X_2, \cdots, X_n$이 독립이고 $E[X] = \mu$, $Var(X)=\sigma^2 (>0)$ 이고 $\bar{X}$와 $S^2$이 각각 표본평균, 표본분산이라고 하자. 이때 $n \rightarrow \infty$ 이면 
+\begin{equation} \label{1}
+\frac{\bar{X} - \mu}{S/ \sqrt{n}} \stackrel{asymp.}{\sim}N(0,1)
+\end{equation}
+이다.
+\end{theorem}
+
+\begin{proof}[Sketch of proof]<2->
+\begin{enumerate}
+\item<3-> 식 (\ref{1})의 $ch.f$ $\phi(t)$의 expansion을 구한다.
+\item<4-> $n \rightarrow \infty$일 때 이 함수가 수렴함을 보인다.
+\end{enumerate}
+\end{proof}
+\end{frame}
+\end{document}
