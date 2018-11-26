@@ -2,6 +2,7 @@
 
 \usepackage{multimedia}
 \usepackage{kotex}
+\usepackage{colortbl}
 
 \usetheme{Madrid}
 
@@ -182,6 +183,16 @@ again covered={\opaqueness<1->{45}}}
 \item<3> 세 번째 항목
 \item<4> The last item
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Row-wise display}
+\begin{tabular}{l| r<{\onslide<2->} r<{\onslide<3->} r<{\onslide<4->} r<{\onslide<5>} r} \hline
+age group & 10s & 20s & 30s & 40s & 합 \\ \hline
+남 & 10 & 5 & 78 & 45 & 138 \\
+여 & 15 & 34 & 2 & 12 & 63 \\
+합 & 25 & 39 & 80 & 57 & 201 \\ \hline
+\end{tabular}
 \end{frame}
 
 

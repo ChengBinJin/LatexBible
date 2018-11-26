@@ -1,6 +1,7 @@
 \documentclass{beamer}
 %\usepackage{syshan}
 \usepackage{kotex}
+\usepackage{colortbl}
 
 \usetheme{default}
 \usecolortheme{beaver}
@@ -38,4 +39,42 @@ $X_1, X_2, \cdots, X_n$이 독립이고 $E[X] = \mu$, $Var(X)=\sigma^2 (>0)$ 이
 \end{enumerate}
 \end{proof}
 \end{frame}
+
+\begin{frame}
+\begin{columns}[T]
+\begin{column}{3in}
+\centerline{
+\includegraphics[width=2in, height=3in]{../images/mari.png}}
+\end{column}
+\begin{column}{8cm}<2->
+\begin{itemize}
+\item<1-> 통계의 미술
+\item<2-> 5\% 의 진정한 의미
+\item<3> 등등
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Row-wise display}
+\centerline{
+\begin{tabular}{l!{\vrule}rrrrr}
+\rowcolor[rgb]{.9, 0, 0} age group & 10s & 20s & 30s & 40s & 합 \\ \hline
+\rowcolor[gray]{.7} \pause 남 & 10 & 5 & 78 & 45 & 138 \\
+\rowcolor[rgb]{0, .9, 0} \pause 여 & 15 & 34 & 2 & 12 & 63 \\
+\rowcolor[rgb]{0, 0, .9} \pause 합 & 25 & 39 & 80 & 57 & 201 \\ \hline
+\end{tabular}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Row-wise display}
+\begin{tabular}{l| r<{\onslide<2->} r<{\onslide<3->} r<{\onslide<4->} r<{\onslide<5>} r} \hline
+age group & 10s & 20s & 30s & 40s & 합 \\ \hline
+남 & 10 & 5 & 78 & 45 & 138 \\
+여 & 15 & 34 & 2 & 12 & 63 \\
+합 & 25 & 39 & 80 & 57 & 201 \\ \hline
+\end{tabular}
+\end{frame}
+
 \end{document}
