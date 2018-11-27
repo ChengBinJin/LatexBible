@@ -5,6 +5,7 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{multimedia}
+\usepackage{xcolor}
 
 \usetheme{default}
 \usecolortheme{beaver}
@@ -21,6 +22,11 @@
 \renewcommand{\insertgotosymbol}{$\Uparrow$}
 \renewcommand{\insertskipsymbol}{$\Rightarrow$}
 \renewcommand{\insertreturnsymbol}{$\Leftarrow$}
+
+\setbeamercolor{block title}{bg=green}
+\setbeamercolor{frametitle}{fg=brown, bg=brown!20}
+%\beamersetaveragebackground{yellow}
+\beamertemplateshadingbackground{blue!20}{blue!80}
 
 \begin{document}
 \setbeamercovered{transparent=25}
@@ -145,16 +151,23 @@ node[below] at (2,0) {\small $\mu=2$};
 \hyperlinkslidenext{\beamerskipbutton{next}}
 \end{frame}
 
+%\begin{frame}
+%\frametitle{Movie Embeding Effects}
+%\begin{center}
+%\begin{tabular}{|c|c|c|} \hline
+%Movie 1 & Movie 2 & Movie 3 \\ \hline
+%\movie[boardwidth=1pt, loop, showcontrols=true, label=Movie1, %poster, width=100pt, height=80pt]{}{./multimedia/twing.avi} &
+%\movie[borderwidth=0pt, loop, start=0.5s, showcontrols=true, label=Movie2, width=3cm, height=2.4cm]{Twing.avi}{./multimedia/twing.avi} &
+%\movie[borderwidth=0pt, loop, label=Movie3, externalviewer]{\underline{Play Movie}}{./multimedia/twing.avi} \\ \hline
+%\end{tabular}
+%\end{center}
+%\end{frame}
+
 \begin{frame}
-\frametitle{Movie Embeding Effects}
-\begin{center}
-\begin{tabular}{|c|c|c|} \hline
-Movie 1 & Movie 2 & Movie 3 \\ \hline
-\movie[boardwidth=1pt, loop, showcontrols=true, label=Movie1, poster, width=100pt, height=80pt]{}{./multimedia/twing.avi} &
-\movie[borderwidth=0pt, loop, start=0.5s, showcontrols=true, label=Movie2, width=3cm, height=2.4cm]{Twing.avi}{./multimedia/twing.avi} &
-\movie[borderwidth=0pt, loop, label=Movie3, externalviewer]{\underline{Play Movie}}{./multimedia/twing.avi} \\ \hline
-\end{tabular}
-\end{center}
+%\hyperlinkmovie[resume]{Movie1}{\beamerbutton{Resume Movie 1}}
+%\hyperlinkmovie[stop]{Movie2}{\beamerbutton{Stop Movie 1}}
+%\hyperlinkmovie[pause]{Movie2}{\beamerbutton{Pause Movie 2}}
+%\hyperlinkmovie[resume]{Movie2}{\beamerbutton{Resume Movie 2}}
 \end{frame}
 
 \end{document}
