@@ -1,5 +1,7 @@
 \documentclass[11pt]{slides}
 
+\usepackage{color}
+
 \begin{document}
 
 \begin{slide}
@@ -8,6 +10,34 @@
 \end{center}
 \LaTeX is powerful and easy to use. It supports slides class now.
 \end{slide}
+
+\begin{slide}
+\begin{center}
+\textcolor{white}{OVERLAY} DEMO
+\end{center}
+This is shown here and \textcolor{white}{there.} \textcolor{white}{``there''} is overlayed.
+
+\begin{overlay}
+\begin{center}
+OVERLAY \textcolor{white}{DEMO}
+\end{center}
+\textcolor{white}{This is shown here and }there. ``there'' wil be overlayed.
+\end{overlay}
+\end{slide}
+
+\begin{slide}
+slide class can
+
+including time.
+\end{slide}
+\addtime{180}
+\begin{note}
+\begin{center}
+Reminder
+\end{center}
+It's time to make a joke.
+\end{note}
+
 
 
 \end{document}
