@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage{kotex}
+
+\begin{document}
+
+\begin{figure}
+\unitlength=0.9mm
+
+\begin{picture}(137, 150)(0, 0)
+\put(0, 145){\line(0,-1){10}}
+\put(0,135){\line(1,0){130}}
+\put(130,135){\line(0,1){10}}
+\put(50,137){\texttt{list} 이전 본}
+
+\put(65,130){\vector(0,1){5}}
+\put(65, 130){\vector(0,-1){5}}
+\put(67,129){\texttt{\symbol{92}topsep + \symbol{92}parskip + [\symbol{92}partopsep]}}
+
+\put(2.5,123){\vector(0,1){5}}
+\put(3, 130.5){\texttt{\symbol{92}itemindent}}
+\put(0,123){\vector(1,0){5}}
+\put(5,118){\framebox(20,7){항 제목}}
+\put(30, 123){\vector(1,0){5}}
+
+\put(30, 123){\vector(-1,0){5}}
+\put(25,126.5){\texttt{\symbol{92}labelsep}}
+\put(35,100){\framebox(60,25){\shortstack[l]{\mbox{ }\\첫째 항 \\ 첫 문단}}}
+\put(35, 118){\dashbox(15, 7){\null}}
+\put(35, 121.5){\vector(1,0){15}}
+
+\put(52,120){\texttt{\symbol{92}itemindent}}
+\put(112.5,120){\vector(1,0){17.5}}
+\put(112.5,120){\vector(-1,0){17.5}}
+\put(99,115){\texttt{\symbol{92}rightmargin}}
+\put(15,116){\vector(-1,0){10}}
+\put(15,116){\vector(-1,0){10}}
+%\usepackage{metalogo}
+\put(5,111){\texttt{\symbol{92}labelwidth}}
+\put(17.5,107){\vector(1,0){17.5}}
+\put(17.5,107){\vector(-1,0){17.5}}
+\put(2,103){\texttt{\symbol{92}leftmargin}}
+
+\put(65,95){\vector(0,1){5}}
+\put(65, 95){\vector(0,-1){5}}
+\put(67,93){\texttt{\symbol{92}parsep}}
+
+\put(35,72){\line(1,0){60}}
+\put(35,72){\line(0,1){10}}
+\put(35,82){\line(1,0){7}}
+\put(42,82){\line(0,1){8}}
+\put(42,90){\line(1,0){53}}
+\put(95,90){\line(0,-1){18}}
+\put(55,78){\shortstack[l]{첫째 항\\둘째 문단}}
+\put(38.5,87){\vector(1,0){3.5}}
+\put(38.5,87){\vector(-1,0){3.5}}
+\put(30,91){\texttt{\symbol{92}listparindent}}
+
+\put(65,67){\vector(0,1){5}}
+\put(65,67){\vector(0,-1){5}}
+\put(67,66){\texttt{\symbol{92}itemsep+\symbol{92}parsep}}
+
+\put(5, 55){\framebox(20,7){항 제목}}
+\put(34,44){\framebox(60,18){둘째 항 }}
+
+\put(65,39){\vector(0,1){5}}
+\put(65,39){\vector(0,-1){5}}
+\put(67,38){\texttt{\symbol{92}itemsep + \symbol{92}parsep + [\symbol{92}partopsep]}}
+
+\put(0,34){\line(0,-1){10}}
+\put(0,34){\line(1,0){130}}
+\put(130,24){\line(0,1){10}}
+\put(50,27){\texttt{list} 이후 본문}
+\end{picture}
+\caption{\texttt{list} 환경의 미세 조정 변수 \label{fig:list}}
+\end{figure}
+\end{document}
