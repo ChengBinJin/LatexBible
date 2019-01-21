@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+
+\usepackage{tikz}
+
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+Hello world? One
+
+\begin{tikzpicture}
+\tikz{\draw (0,0) rectangle (2ex, 1em)}
+\tikz[very thick] \draw (0,0) rectangle (2ex, 1em); \\
+\tikz \draw (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[>-] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[->] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[->>] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[<->] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[<<->>] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[->|] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[->>|] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[|<->|] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[|<<->>|] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw (0,0) rectangle (1em, 1em);
+\tikz[baseline=2pt] \draw (0, 0) rectangle (1em, 1em);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[-Stealth] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[Stealth-Stealth] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[-Latex] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikz \draw[-{Classical TikZ Rightarrow}] (0pt, 3pt) -- (20pt, 3pt);
+\end{tikzpicture}
+
+\tikz{\draw[-{Stealth[length=3mm]}](0,0)--(1.2,0);
+\draw[|<->|](0.8,.4) -- node[above=1mm]{3mm}(1.2,.4);}
+
+\tikz{\draw[-{Latex[length=3mm]}](0,0)--(1.5,0);
+\draw[|<->|](0.8,.4) -- node[above=1mm]{3mm}(1.2,.4);}
+
+\tikz{\draw[-{Classical TikZ Rightarrow [length=3mm]}](0,0)--(1.2,0);
+\draw[|<->|](0.8,0.6) -- node[above=1mm]{3mm}(1.2,.6);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
