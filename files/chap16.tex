@@ -171,12 +171,30 @@ Hello world? One
 \node[below right] at (2,1) {below right};
 \end{tikzpicture}
 
+\begin{tikzpicture}[xscale=1.3]
+\draw[step=3cm, gray!70, thin] (0, -0.2) grid (9, 0.2);
+\node[align=left, below] at (1.5, -0.5){이 부분은 \\ 왼쪽으로 \\정렬되지 않을까요?};
+\node[align=center, below] at (4.5, -0.5) {이 부분은\\중앙으로 \\정렬되지 않을까요?};
+\node[align=right, below] at (7.5, -0.5) {이 부분은\\오른쪽으로 \\정렬되지 않을까요?};
+\end{tikzpicture}
 
+\begin{tikzpicture}
+\node[fill=pink] at (0, 0) {상자};
+\node[draw] at (1.5, 0) {긴 상자};
+\node[draw] at (4,0) {좀 더 긴 상자};
+\node[fill=pink, circle] at (6,0) {원};
+\node[fill=pink, circle] at (7.5cm, 0) {중간 원};
+\node[fill=pink, circle] at (9.5cm, 0) {제일 큰 원};
+\end{tikzpicture}
 
-
-
-
-
+\begin{tikzpicture}
+\draw node[fill=yellow, draw, circle, text width=1.5cm] at (0,0) {원};
+\draw node[fill=yellow, draw, circle, text width=1.5cm] at (2,0) {중간 원};
+\draw node[fill=yellow, draw, circle, text width=1.5cm] at (4,0) {큰 원};
+\draw node[fill=pink, draw=blue, circle, text width=1.5cm, align=center] at (6,0) {원};
+\draw node[fill=pink, draw=blue, circle, text width=1.5cm, align=center] at (8,0) {중간 원}
+\draw node[fill=pink, draw=blue, circle, text width=1.5cm, align=center] at (10,0) {큰 원}
+\end{tikzpicture}
 
 
 \end{document}
