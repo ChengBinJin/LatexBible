@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{tikz}
+\usetikzlibrary{patterns}
 \usepackage{kotex}
 
 \usetikzlibrary{arrows.meta}
@@ -218,5 +219,42 @@ Hello world? One
 \draw[black](3,0) rectangle (5,2);
 \fill[color=blue!40, draw=black] (6,0) rectangle (8,2);
 \end{tikzpicture}
+
+\begin{tikzpicture}[scale=.9]
+\shade[left color=green, right color=yellow] (0,0) circle (1);
+\shade[top color=green, bottom color=yellow] (3,0) circle (1);
+\shade[inner color=green, outer color=yellow, draw=black] (6,0) circle (1);
+\shade[ball color=green] (9,0) circle [radius=1];
+\shade[top color=blue, bottom color=green, middle color=yellow] (12,0) circle [radius=1];
+\end{tikzpicture}
+
+%\begin{tikzpicture}[scale=0.8]
+%\shade[shading=color wheel] (0,0) circle (1.5);
+%\fill[white] (4,0) circle (1);
+%\shade[shading=color wheel black center] (8,0) circle (1.5);
+%\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[shade] (2,0) circle [x radius=0.8, y radius=1];
+\shadedraw (4,0) circle [x radius=0.8, y radius=1];
+\draw (6,0) ellipse [x radius=0.8, y radius=1];
+\shade (6,0) circle [x  radius=0.8, y radius=1];
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.9]
+\foreach \x/\y in {0/checkerboard, 3/bricks, 6/dots, 9/horizontal lines}{
+\pattern[pattern color=red, pattern=\y](\x,0) circle [radius=1.5];
+\node[below] at (\x, -1.5) {\y};};
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
