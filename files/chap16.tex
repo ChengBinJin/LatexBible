@@ -6,6 +6,11 @@
 
 \usetikzlibrary{arrows.meta}
 
+\newcommand{\mytikzarea}{%
+\draw[step=0.5cm, color=lightgray, thin] (0,0) grid (5.2, 2.7);
+\draw[fill=green, opacity=0.5] (15:3) arc (15:45:3) -- (0,0) -- cycle;
+\draw[dotted, thin] (2.5, 1.35) circle (1);}
+
 \begin{document}
 Hello world? One
 
@@ -247,9 +252,41 @@ Hello world? One
 \node[below] at (\x, -1.5) {\y};};
 \end{tikzpicture}
 
+\begin{tikzpicture}
+\foreach \x/\y in {3/checkerboard light gray, 9/horizontal lines gray} {\pattern[pattern color=red, pattern=\y] (\x,0) circle [radius=1.5];
+\node[below] at (\x, -1.5) {\y};};
+\foreach \x/\y in {0/crosshatch dots light steel blue, 6/horizontal lines light gray}{\pattern[pattern=\y] (\x,0) circle [radius=1.5];
+\node[below=1em] at (\x, -1.5) {\y};};
+\end{tikzpicture}
 
+\begin{tikzpicture}
+\draw[fill=yellow, pattern color=blue, pattern=dots] (0,0) ellipse (2 and 1);
+\draw[pattern color=blue, pattern=dots, fill=yellow] (5,0) ellipse (2 and 1);
+\end{tikzpicture}
 
+\begin{tikzpicture}
+\clip (2,1) circle (1);
+\draw[step=0.5cm] (0,0) grid (4,3);
+\end{tikzpicture} \hspace{2cm}
 
+\begin{tikzpicture}[thick]
+\draw (0,0) rectangle (5,3) node[below left]{$U$};
+\draw (1.5,1.5) circle (1cm) node[left] {$A$};
+\draw (3,1.5) circle (1cm) node[right] {$B$};
+\begin{scope} % 교집합
+\clip (3,1.5) circle (1cm);
+\pattern[pattern=north east lines] (1.5,1.5) circle (1cm);
+\end{scope} % end scope
+\end{tikzpicture} 
+
+\begin{tikzpicture}
+\mytikzarea
+\draw[thin, dotted] (2.5, 0.35) -- (8.8, -0.32) (2.5, 2.35) -- (8.7, 3.7);
+\begin{scope}[xshift=4cm, yshift=-1cm, scale=2]
+\clip[draw] (2.5, 1.35) circle (1);
+\mytikzarea
+\end{scope}
+\end{tikzpicture}
 
 
 
