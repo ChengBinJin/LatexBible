@@ -312,8 +312,49 @@ Hello world? One
 \end{scope}
 \end{tikzpicture}
 
-n  
+\begin{tikzpicture}
+\draw[->, draw, thick] (-0.5,0) -- (6,0); % x축
+\draw[->, draw, thick] (0,-0.5) -- (0,5); % y축
+\path[draw] (2.5, 2.1) circle [radius=2cm];
 
+%\path[draw, name path=deg30line] (0,0) -- (30:7); % 30도
+%\path[draw, name path=deg60line] (0,0) -- (60:6); % 60도
 
+%\draw[fill=green, name intersections={of=deg30line and mcircle, total=\npoints}] \foreach \i in {1,...,\npoints} {(intersection-\i) coordinate (deg30pts-\i) (deg30pts-\i) circle (3pt)};
+%\draw[name intersections={of=deg60line and mcircle, total=\npoints}] \foreach \i in {1,...,\npoints} {(intersection-\i) coordinate (deg60pts-\i)};
+
+%\draw[fill=green] (deg60pts-1) circle (3pt);
+%\draw[fill=green] (deg60pts-2) circle (3pt);
+
+%\draw[dotted] (deg60pts-1) -- (deg30pts-1) (deg30pts-2) -- (deg60pts-2);
+\end{tikzpicture}
+
+왼쪽
+\begin{tikzpicture}[thick]
+\draw[blue] (1,0) -- ++(3em, 2ex);
+\end{tikzpicture}
+오른쪽
+
+왼쪽
+\begin{tikzpicture}[thick]
+\useasboundingbox
+(0,0) rectangle (1,.5);
+\draw[blue] (1,0) -- ++(3em, 2ex);
+\end{tikzpicture}
+오른쪽
+
+왼쪽
+\begin{tikzpicture}[thick]
+\draw[use as bounding box] (0,0) rectangle (1,.5);
+\draw[blue] (1,0) -- ++(3em, 2ex);
+\end{tikzpicture}
+오른쪽
+
+왼쪽
+\begin{tikzpicture}[thick]
+\useasboundingbox (0,0) rectangle (0,0);
+\draw[blue] (0,0) -- (3em, 2ex);
+\end{tikzpicture}
+오른쪽
 
 \end{document}
