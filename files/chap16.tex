@@ -2,6 +2,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{patterns}
+\usetikzlibrary{snakes}
 \usepackage{kotex}
 
 \usetikzlibrary{arrows.meta}
@@ -356,5 +357,40 @@ Hello world? One
 \draw[blue] (0,0) -- (3em, 2ex);
 \end{tikzpicture}
 오른쪽
+
+\begin{tikzpicture}
+\draw[red, dotted, line width=5pt, ->] (0,0) -- (2,0) -- (1,1.713);
+\draw[fill=green] (2.5,0) to (4.5,0) to (3.5, 1.713) to cycle;
+\draw[very thick, ->>] (5,0) |- ++(2,2);
+\draw[very thick, ->>] (8,0) -| ++(2,2);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[densely dashed, thick] (0,0) to (3,2);
+\draw[red, thick] (0,0) to [out=90, in=180] (3,2);
+\draw[blue, thick] (0,0) to [bend right] (3,2);
+%% 가이드 가인
+\draw[dotted, gray, ->] (0,0) -- (0,2);
+\draw[dotted, gray, ->] (3,2) -- (0,2);
+%% x축으로 3.5 이동해 다시  그림.
+\draw[thick] (3.5,0) to (6.5,2) to [out=180, in=90] (3.5,0) to [bend right] (6.5, 2);
+%% x축으로 7 이동해 다시 그림.
+\draw[thick] (7,0) to (10,2) to [out=180,in=90] cycle to [bend right] (10,2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[thick]
+\draw[red, snake=zigzag] (0,3.7) -- (3,3.7) node[black, right] {\verb|\draw[snake=zigzag] (0,3.7) -- (3,3.7);|};
+\draw[red, snake=brace] (0,3.2) -- (3,3.2) node[black, right] {\verb|\draw[snake=brace] (0,3.2) -- (3,3.2)|};
+\draw[red, snake=triangles] (0,2.7) -- (3,2.7) node[black, right] {\verb|\draw[snake=triangles] (0,2.7) -- (3,2.7);|};
+\draw[red, snake=coil, segment length=4pt] (0,2) -- (3,2) node[black, right, text width=7cm] {\verb|\draw[snake=coil, segment length=4pt]| \\ \verb| (0,2) -- (3,2);|};
+\draw[red, snake=coil, segment aspect=0] (0,1) -- (3,1) node[black, right, text width=7cm] {\verb|\draw[snake=coil, segment aspect=0]| \\ \verb|(0,1) -- (3,1);|};
+\draw[red, snake=expanding waves, segment angle=10] (0,0) -- (3,0) node[black, right, text width=7cm] {\verb|\draw[snake=expanding waves, segment angle=10]|\\ \verb|(0,0) -- (3,0);|};
+\end{tikzpicture}
+
+
+
+
+
+
 
 \end{document}
