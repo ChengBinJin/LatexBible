@@ -3,6 +3,7 @@
 \usepackage{tikz}
 \usetikzlibrary{patterns}
 \usetikzlibrary{snakes}
+\usetikzlibrary{trees}
 \usepackage{kotex}
 
 \usetikzlibrary{arrows.meta}
@@ -458,5 +459,81 @@ Hello world? One
 \node[xshift=4cm] at (4.5,4) {$f(x) = 4 - x ^2$};
 \end{tikzpicture}
 
+\begin{tikzpicture}
+\node {부모} child[->] {node {아들}} child {node {딸}};
+
+\begin{scope}[xshift=6cm]
+\tikzstyle level 1=[sibling distance=4cm, level distance=2cm]
+\tikzstyle level 2=[sibling distance=1.5cm, level distance=1.5cm]
+
+\node {부모}
+child {node {아들}
+	child {node {손자1}}
+	child {node {손자2}}
+} % end child
+child {node {딸}
+    child[dotted] {node[red] {외손자1}}
+	child {node {외손자2}}
+	child {node {외손자3}}
+}; % end child
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[parent anchor=east, child anchor=west, grow=east, color=red, scale=0.9]
+\tikzset{%
+level 1/.style={sibling distance=1.7cm, level distance=2cm},
+level 2/.style={sibling distance=0.7cm, level distance=2cm}}
+
+\begin{scope}
+\node[left] {부모}
+child {node {아들}
+	child {node {손자1}}
+	child {node {손자2}}
+	}
+	
+child {node {딸}
+	child {node {외손자1}}
+	child {node {외손자2}}
+	child {node {외손자3}}
+	};
+\end{scope}
+
+\begin{scope}[xshift=10cm, yshift=1cm, parent anchor=south, child anchor=north, grow=south]
+\tikzstyle{every node}=[ball color=magenta, circle, text=white]
+\node {부모}
+child[->] {node {자녀 1}}
+child {node {자녀 2}};
+\end{scope}
+
+\begin{scope}[xshift=14cm]
+\tikzstyle{every node}=[ball color=magenta, circle, text=white]
+\node[text width=1.5cm, align=center]{부모}
+child[->] {node {자녀 1}}
+child {node {자녀 2}};
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\tikzstyle{level 1}=[sibling distance=2cm, level distance=2.5cm]
+\tikzstyle{every node}=[ball color=magenta, circle, text=white, text width=1cm, align=center]
+\node {부모}
+child[->] {node {자녀 1}}
+child {node {자녀 2}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[edge from parent fork down, scale=2]
+\tikzstyle{every node}=[fill=red!30, rounded corners];
+\node {부모}
+	child {node {자녀 1}}
+	child {node {자녀 2}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[edge from parent fork down, scale=2]
+\tikzstyle{every node}={fill=red!30, rounded corners}
+\tikzstyle{edge from parent}=[red, ->, thick, draw]
+\node{부모}
+	child {node {아들}}
+	child {node {딸}};
+\end{tikzpicture}
 
 \end{document}
