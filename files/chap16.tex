@@ -4,6 +4,8 @@
 \usetikzlibrary{patterns}
 \usetikzlibrary{snakes}
 \usetikzlibrary{trees}
+\usetikzlibrary{shapes.callouts}
+\usetikzlibrary{shadows}
 \usepackage{kotex}
 
 \usetikzlibrary{arrows.meta}
@@ -534,6 +536,48 @@ child {node {자녀 2}};
 \node{부모}
 	child {node {아들}}
 	child {node {딸}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.75]
+\draw[help lines] (0,0) grid (9,6);
+\draw (6,2) ellipse (2 and 1);
+\draw[fill] (6,2) circle (2pt);
+
+\draw[thick, blue, rotate=45, ->] (6,2) ellipse (2 and 1);
+\fill[blue, rotate=45] (6,2) circle (2pt); 
+
+\draw[thick, blue, rotate=45, ->] (0,0) -- (9,0);
+\draw[thick, blue, rotate=45, ->] (0,0) -- (0,5);
+\draw[thick, blue, ->] (1.5,0) arc (0:45:1.5);
+\draw node[right] at (1.5,0.5) {$\theta$};
+
+\draw[red, rotate around={45:(6,2)}] (6,2) ellipse (2 and 1);
+
+\node[ellipse callout, callout absolute pointer={(8,2)}, draw] at (10,1) {기준 타원};
+\node[ellipse callout, callout absolute pointer={(2,6.3)}, draw=blue] at (0,7) {전체 회전};
+\node[ellipse callout, callout absolute pointer={(7.5,3.3)}, draw=red] at (10,4) {상대 회전};
+\end{tikzpicture}
+
+\begin{tikzpicture} [remember picture]
+\node[ellipse callout, draw] at (3,2) (ell) {ellipse};
+\node[cloud callout, shading=ball, color=white] at (0,4) (cld) {cloud};
+\node[rectangle callout, draw] at (0,1) (rect) {rectangle};
+\end{tikzpicture} \hspace{2cm}
+
+\begin{tikzpicture} [remember picture]
+\tikzstyle costyle=[{ellipse callout, color=white, fill=#1}]
+\draw [help lines] grid (4,4);
+\node [costyle=red, callout relative pointer={(0,1)}] at (3,1) {상대좌표};
+\node [costyle=blue, callout absolute pointer={(0,1)}] at (1,0) {절대좌표};
+\node [costyle=green, overlay, callout absolute pointer={(ell.east)}] at (2,3) {외부좌표};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[fill=red, drop shadow] (0,0) rectangle (1,1);
+\draw[fill=magenta, drop shadow] ++(3,0.5) ellipse (1cm and .5cm);
+\draw[fill=blue, copy shadow] ++(5,0) rectangle +(1,1);
+\draw [fill=green, double copy shadow] ++(7,0) rectangle +(1,1);
+\draw [fill=black, circular glow={fill=red}] ++(9.5,0.5) circle (.5cm);
 \end{tikzpicture}
 
 \end{document}
