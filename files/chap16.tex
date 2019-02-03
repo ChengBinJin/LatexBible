@@ -6,6 +6,7 @@
 \usetikzlibrary{trees}
 \usetikzlibrary{shapes.callouts}
 \usetikzlibrary{shadows}
+\usetikzlibrary{matrix}
 \usepackage{kotex}
 
 \usetikzlibrary{arrows.meta}
@@ -578,6 +579,83 @@ child {node {자녀 2}};
 \draw[fill=blue, copy shadow] ++(5,0) rectangle +(1,1);
 \draw [fill=green, double copy shadow] ++(7,0) rectangle +(1,1);
 \draw [fill=black, circular glow={fill=red}] ++(9.5,0.5) circle (.5cm);
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=5]
+\node [black!20, xshift=0.2ex, yshift=-0.2ex] (0,0) {\bfseries 아주 중요한 일입니다.};
+\node [black!40, xshift=0.15ex, yshift=-0.15ex] (0,0) {\bfseries 아주 중요한 일입니다.};
+\node [red] (0,0) {\bfseries 아주 중요한 일입니다.};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\matrix (mymtx) [matrix of nodes] {
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+};
+\draw[thick, red, ->] (mymtx-1-1) |- (mymtx-2-3);
+\end{tikzpicture} \hfill
+
+\begin{tikzpicture}
+\matrix [matrix of nodes] {
+1 & [5mm] 2 & [1cm] | [blue]| 3 \\
+4 &            5 &            | [red]|  6 \\
+7 &            8 &                         9 \\};
+\end{tikzpicture} \hfill
+
+\begin{tikzpicture} \hfill
+\matrix [matrix of nodes] {
+1 & 2 & 3 \\
+4 & 5 & \node[red, circle, draw] {6}; \\
+7 & 8 & \node(0,0) {9}; \draw(0,0) circle [radius=10pt];
+\\};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\matrix [matrix of math nodes] (three) {
+a_{11} & a_{12} & a_{13} = \displaystyle\int f(x) dx \\
+a_{21} & a_{22} & |[red]| a_{23} \\
+a_{31} & a_{32} & a_{33} \\
+};
+\draw (three-1-1) node[above=1mm] {\tiny (1,1)번째 원소};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\matrix [matrix of math nodes, 
+nodes={circle, fill=yellow, draw}] {
+a_{11} &  & a_{13} \\
+a_{21} & & a_{23} \\
+a_{31}  & a_{32} & \\ };
+\end{tikzpicture} \hspace{2cm}
+
+\begin{tikzpicture}
+\matrix [matrix of math nodes, nodes={circle, fill=yellow, draw},
+nodes in empty cells] {
+a_{11} & & a_{13} \\
+a_{21} & & a_{23} \\
+a_{31} & a_{32} & \phantom{a_{33}} \\};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\matrix [matrix of nodes, nodes={text width=16mm, draw}] {
+1번 행 & {위쪽 줄 \\ 아래쪽 줄} \\
+두 번째 & 빈칸 \\};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\matrix [matrix of math nodes, left delimiter=(, right delimiter=\}] {
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} \\ };
+\end{tikzpicture} \hspace{1cm}
+
+\begin{tikzpicture}[
+every left delimiter/.style={red, xshift=-1em},
+every right deilmiter/.style={xshift=-1ex}]
+\matrix [matrix of math nodes, left delimiter=(, right delimiter=\}] {
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} \\ };
 \end{tikzpicture}
 
 \end{document}
