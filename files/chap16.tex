@@ -647,24 +647,35 @@ a_{31} & a_{32} & \phantom{a_{33}} \\};
 \end{tikzpicture}
 
 \begin{tikzpicture}
-\matrix [matrix of math nodes, left delimiter=(, right delimiter=\}] {
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\ };
-\end{tikzpicture} \hspace{1cm}
-
-\begin{tikzpicture}[
-every left delimiter/.style={red, xshift=-1em},
-every right deilmiter/.style={xshift=-1ex}]
-\matrix [matrix of math nodes, left delimiter=(, right delimiter=\}] {
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\ };
+\draw[help lines] (0,0) grid (6,2);
+\foreach \x in {0,1,...,6} {
+\foreach \y/\tmpcolor in {0/red, 1/green, 2/blue} 
+{\fill[\tmpcolor] (\x,\y) circle (2pt);
+};
+};
 \end{tikzpicture}
 
 \begin{tikzpicture}
-\tikzstyle fixed=[draw, fill=yellow, inner sep=2pt, shading=color wheel white center];
-%\node[fixed, shape=diamond, scale=0.9] at (0,0) {\textt{diamond}};
+\draw[help lines, black!20] (-2,0) grid (7,6);
+\foreach \x in {-2,-1,...,7} {% x축 눈금
+\node[below] at (\x,0) {\small \x}; };
+\foreach \y in {0,1,...,6} {% y축 눈금
+\node[left] at (-2,\y) {\small \y}; };
+\draw[dotted, ->, thick] (0,0) -- (6.2,6.2);
+\draw[dotted, ->, thick] (0,0) -- (-2.3, 2.3);
+%% 원래 좌표의 경로
+\draw[red, ->] (0,1) -- (1,1);
+\draw[red] (3,1) circle (1cm);
+\fill[red] (3,1) circle (2pt);
+\shade[ball color=red] (4.5,2.5) rectangle (5.5,3.5);
+%% 기준 벡터 변경
+\begin{scope}[x={(1cm, 1cm)}, y={(-2cm, 2cm)}, very thick, blue]
+\draw[->] (0,1) -- (1,1);
+\draw (3,1) circle (1cm);
+\fill (3,1) circle (2pt);
+\end{scope}
+%% 기준 벡터 변경
+\shade[x={(0cm, 1cm)}, y={(1cm, 0cm)}, ball color=green] (4.5,2.5) rectangle (5.5,3.5);
 \end{tikzpicture}
 
 
