@@ -701,4 +701,20 @@ a_{31} & a_{32} & \phantom{a_{33}} \\};
 \draw[blue, <->] (x2) -- (y2);
 \end{tikzpicture}
 
+\begin{tikzpicture}
+\node (rect1) at (4,2) [draw=red, ball color=cyan, thick, minimum width=3cm, minimum height=2cm] {};
+%% 동서남북
+\tikzstyle every node=[draw]; %% 사각형 그리기
+
+\node[right] at (rect1.east) {\texttt{.east}};
+\node[below] at (rect1.south) {\texttt{.south}};
+\node[left] at (rect1.west) {\texttt{.west}};
+\node[above] at (rect1.north) {\texttt{.north}};
+%% 모서리 방향
+\node[above right] at (rect1.north east) {\texttt{.north east}};
+\node[below right] at (rect1.south east) {\texttt{.south east}};
+\node[above left] at (rect1.north west) {\texttt{.north west}};
+\node[below left] at (rect1.south west) {\texttt{.south west}};
+\end{tikzpicture}
+
 \end{document}
