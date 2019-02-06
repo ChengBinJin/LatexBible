@@ -678,5 +678,27 @@ a_{31} & a_{32} & \phantom{a_{33}} \\};
 \shade[x={(0cm, 1cm)}, y={(1cm, 0cm)}, ball color=green] (4.5,2.5) rectangle (5.5,3.5);
 \end{tikzpicture}
 
+\begin{tikzpicture}
+\draw (0,0) -- (1,0) -- ([turn]72:1) -- ([turn]72:1) -- ([turn]72:1) -- cycle;
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[thick] (5,0) rectangle (6,1);
+\draw[red, dashed, thick] (3,0) rectangle ++(1,1);
+\draw[blue, dotted, thick] (1,0) rectangle +(1,1);
+\draw (0,-0.1) -- (+7,-0.1);
+\foreach \x in {1,2,3,4,5,6,7} {\draw[thin] (\x, -0.3) node {\x};};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw   (0,0) node (x) {남서}
+			(3,2) node (y) {북동동};
+\draw (x) -- (y);
+
+\coordinate (x2) at (4,0);
+\coordinate (y2) at (7,2);
+\fill [top color=magenta] (x2) rectangle (y2);
+\draw[blue, <->] (x2) -- (y2);
+\end{tikzpicture}
 
 \end{document}
