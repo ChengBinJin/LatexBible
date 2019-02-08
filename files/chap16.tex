@@ -11,6 +11,7 @@
 \usetikzlibrary{shapes.symbols}
 \usetikzlibrary{shapes.arrows}
 \usetikzlibrary{shapes.misc}
+\usetikzlibrary{calc}
 \usepackage{kotex}
 
 \usetikzlibrary{arrows.meta}
@@ -716,5 +717,40 @@ a_{31} & a_{32} & \phantom{a_{33}} \\};
 \node[above left] at (rect1.north west) {\texttt{.north west}};
 \node[below left] at (rect1.south west) {\texttt{.south west}};
 \end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{scope}
+\coordinate (p1) at (1,1);
+\draw [help lines] (0,0) grid (3,2);
+\draw [red] ($2*(1,1)$) node {(a)};
+\draw [green] (${1+1}*(1,.5)$) node {(b)};
+\draw [blue] ($2*(p1)-(1,1.5)$) node {(c)};
+\draw [black] (${3*(4-3)}*(1,0.5)$) node {(d)};
+\end{scope}
+\begin{scope}[xshift=4cm]
+\draw [help lines] (0,0) grid (3,2);
+\draw[->] (0,0) -- ($1.5*(3,2)$);
+\foreach \i in {0,0.5,...,1.5} \node[above] at ($(0,0)!\i!(3,2)$) {\i};
+\draw[red] (0,0) -- ($(0,0)!0.5!30:(3,2)$);
+\draw[->] ($0.3*(3,2)$) arc (30:60:1);
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw [help lines] (0,0) grid (4,3);
+\coordinate (a) at (0.5,0.5);
+\coordinate (b) at (3.5,0.5);
+\coordinate (c) at (2.5, 2.5);
+\draw (a) -- (b) -- (c) -- cycle;
+\draw[red, ->] (c) -- ($(a)!(c)!(b)$);
+\draw[blue, ->] (c) -- ($(a)!(c)!90:(b)$);
+\node[left] at (a) {\scriptsize A};
+\node[right] at (b) {\scriptsize B};
+\node[above] at (c) {\scriptsize C};
+\draw[green, ->] (b) -- ($(a)!(b)!(c)$);
+\draw[blue, ->] (a) -- ($(b)!(a)!(c)$);
+\end{tikzpicture}
+
+
 
 \end{document}
