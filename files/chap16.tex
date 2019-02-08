@@ -751,6 +751,26 @@ a_{31} & a_{32} & \phantom{a_{33}} \\};
 \draw[blue, ->] (a) -- ($(b)!(a)!(c)$);
 \end{tikzpicture}
 
+\begin{tikzpicture}
+\node[anchor=south west, inner sep=0] at (0,0) {\includegraphics[width=0.9\textwidth] {../images/mari.png}};
+%\includegraphics[width=0.9\textwidth] {../images/mari.png}
+\node[yellow, right] at (0.5, 6.5) {\bfseries\copyright Songyong Sim};
+\draw[help lines] (0,0) grid (12,7);
+\draw[blue, very thick, rounded corners] (6.5,2) rectangle (8,2.8);
+\end{tikzpicture}
 
+\begin{tikzpicture}
+\node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=0.6\textwidth]{../images/mari.png}};
+\begin{scope}[x={(image.south east)}, y={(image.north west)}]
+\node[yellow, right] at (0.04,0.9) {\scriptsize\copyright Songyong Sim};
+\draw[blue, very thick, rounded corners] (0.52,0.28) rectangle (0.62,0.38);
+\end{scope}
+\end{tikzpicture}
+
+%\begin{tikzpicture}
+%\tikzstyle{myImagePath}=[path picture]={\node at (path picture bounding box.center) {\includegraphics[width=6cm]{#1}};}];
+%\draw [thick, blue, path picture={\node at (path picture bounding box.center) {\includegraphics[width=6cm]{../images/mari.png}}}] (0,1) circle (1.5);
+%\draw [thick, fill=black!70, patch picture={\node[yellow] at (path picture bounding box.center) {\Large\bf 문자열의 중앙 부분만 가져올까요?};}] (9,1) circle (1.5);
+%\end{tikzpicture}
 
 \end{document}
