@@ -773,4 +773,14 @@ a_{31} & a_{32} & \phantom{a_{33}} \\};
 %\draw [thick, fill=black!70, patch picture={\node[yellow] at (path picture bounding box.center) {\Large\bf 문자열의 중앙 부분만 가져올까요?};}] (9,1) circle (1.5);
 %\end{tikzpicture}
 
+\begin{tikzpicture}
+\tikzstyle{my image cut}=[thick, blue, path picture={\node[left=#1] at (path picture bounding box.center){\includegraphics[width=\textwidth]{../images/mari.png}};}];
+\fill[brown] (-0.5,-2.5) rectangle (11.5, 2.5); % 벽돌 색
+\draw[pattern=bricks, pattern color=white] (-0.5, -2.5) rectangle (11.5,2.5);
+\draw[my image cut=-11cm] (0,-2) rectangle (2,2);
+\draw[my image cut=-8cm] (3,-2) rectangle (5,2);
+\draw[my image cut=-5cm] (6,-2) rectangle (8,2);
+\draw[my image cut=-2cm] (9,-2) rectangle (11,2);
+\end{tikzpicture}
+
 \end{document}
